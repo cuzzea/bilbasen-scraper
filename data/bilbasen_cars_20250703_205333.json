@@ -1,0 +1,1607 @@
+{
+  "scraped_at": "2025-07-03T20:53:33.244755",
+  "total_listings": 10,
+  "filters": {
+    "price_range": "250,000 - 300,000 kr",
+    "fuel_type": "Electric",
+    "first_registration": "2024+",
+    "ownership": "Retail",
+    "category": "Car"
+  },
+  "listings": [
+    {
+      "externalId": 6583736,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb250/amg-premium-5d/6583736",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/06461e71-18c4-469a-8c93-5b4ef819451e.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/8932b388-1ecd-4dc4-8efd-aa5332ee8dd9.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/c4a5bd8e-dddc-44f9-affb-530e1333d32b.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/92bebea0-aac1-4e49-96e8-b8f845150405.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/d7e5dd99-2520-49be-912d-29ccd70a2b22.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/923f2f7c-388c-4a18-84c4-6b28ec0c0214.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/fe0746aa-d5cf-49c2-a576-ddee3b36781d.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/ca346a89-175e-4c6e-be11-4645644737d4.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/c28f1b27-098a-4f92-b9c9-68756d72b1ce.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/2775d8da-25b6-4b05-9f4d-fb3343ce8ab7.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/3a3b1af8-9130-413f-8460-ea3281ad52ea.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/fc1cecf1-587e-49fa-b7df-230458acb7b2.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/0501127e-94b6-4477-bd12-2fdd6a10dbf7.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/224b8078-7a37-4bcb-a771-3f1e9c9d0724.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/906f088b-50a8-4380-87ce-fd98cbd00839.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/fc3becf7-3083-48dd-975e-afaa1e8f80d7.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/a202b822-a4ba-4923-a058-15b3752d39d8.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/f01220e8-12fe-4aaa-984a-e485309ba684.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/07a6866e-0e9d-4117-872f-fa81b2155150.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/91c0ea9a-2138-4502-9f24-123b827e55d5.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/a6160de0-3d75-4177-bb9b-ad52acf9fc82.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Video",
+          "url": "https://view.vzaar.com/b54924f1-4d6b-29fe-1d80-7e1c280853a5/player?apiOn=true",
+          "thumbnailUrl": "https://view.vzaar.com/b54924f1-4d6b-29fe-1d80-7e1c280853a5/thumb",
+          "mediaProvider": "Vzaar",
+          "id": "b54924f1-4d6b-29fe-1d80-7e1c280853a5"
+        },
+        {
+          "mediaType": "DealerLogo",
+          "url": "https://billeder.bilbasen.dk/bilinfo/7b628bc5-cff7-4290-b31d-78f5c6bc71e7.jpg?class=S400X400"
+        }
+      ],
+      "price": {
+        "price": 424900.0,
+        "displayPrice": "424.900 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB250+",
+      "variant": "AMG Premium 5d",
+      "doors": 5,
+      "description": "Komfort/Teknik: 5 års fabriksgaranti fra første registrering – kan forlænges op til 10 år, Faceliftet model med mulighed for anhængertræk, AMG Premium, Førerassistentpakke Plus, Active Distance Assist DISTRONIC, Head-up display, LED High performance forlygter, Adaptiv fjernlysassistent, Active Steering Assist, Blind Spot Assist, Active Lane Keeping Assist, Elektrisk justerbart førersæde med memory, Elektrisk justerbart passagersæde, Keyless Go, 10.25\" digitalt instrumentdisplay, 10.25\" mediadisplay, MBUX interiørassistent, Burmester Soundsystem, MBUX multimedia system, THERMOTRONIC klimaanlæg (2 zoner), DAB-radio, Parkeringspakke med 360° kamera, Parking Assist, Færdselstavleassistent, Sportssæder, Sædekomfortpakke, 4-vejs lændestøtte, Opvarmede forsæder, Midterarmlæn bag med kopholdere, Justerbart bagsæde, Opbevaringspakke, EASY-PACK bagklap, Opbevaringsnet bag forsæder, Elektrisk sammenklappelige sidespejle, Regnsensor, Dobbelt kopholder, Trådløs opladning af smartphone foran, USB-pakke Plus, 12V-stik i bagagerum, Dobbelt solskærm, Lys- og synpakke, \n\nDesign: Natsort, AMG Designlinje, 18\" AMG letmetalfælge i 5-eget design, ARTICO kunstlæder/DINAMICA mikrofiber sort, Taghimmel sort, Fladbundet multifunktionssportsrat i nappalæder, AMG bundmåtter, Interiørliste med stjernemønster belyst, Interiørlister med belysning, Varmeisolerende og mørktonede ruder, Ambiente belysning (64 farver), Tagræling i poleret aluminium, Projektion af logo, Belyste trinlister med logo, \n\nSikkerhed/miljø: Fodgængerbeskyttelse, PRE-SAFE, Tyveripakke, ISOFIX, Dæktryksovervågning, Tyverisikring varslingssystem, Knæairbag, Akustik advarsel, TIREFIT, Bagsædeseleindikator, Ladekabel (5 meter) til wallbox og offentlig ladning.",
+      "location": {
+        "lat": 55.744602,
+        "lon": 9.584339,
+        "zipCode": 7100,
+        "city": "Vejle",
+        "region": "Syd- og Sønderjylland"
+      },
+      "details": [
+        {
+          "displayText": "10/2024"
+        },
+        {
+          "displayText": "11.000 km"
+        },
+        {
+          "displayText": "535 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [
+        "HasVideo"
+      ],
+      "isFavorite": false,
+      "sellerType": "Forhandler",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "10/2024",
+          "displayTextShort": "10/2024"
+        },
+        "mileage": {
+          "displayTextLong": "11.000 km",
+          "displayTextShort": "11.000 km"
+        },
+        "hk": {
+          "displayTextLong": "190 hk",
+          "displayTextShort": "190 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.400 kg trækvægt",
+          "displayTextShort": "1.400 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 8,9 sek",
+          "displayTextShort": "8,9 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 535 km",
+          "displayTextShort": "535 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "70 kWh batteri",
+          "displayTextShort": "70 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    },
+    {
+      "externalId": 6554714,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb250/amg-premium-5d/6554714",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/df669452-b0d2-48ad-b698-531989af9d7d.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/94783479-c61d-42e4-a517-57c2c0a25626.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/891ee278-fe67-44f9-89c2-90a42f22fc2a.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/f9e5f419-63b3-42c9-907c-e46570df455b.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/eab4f90f-4f50-4305-99be-5693d47e6a35.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/566fe1cf-1135-4d2d-b83d-52d65e3c5f6b.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/606b69cc-7572-4028-8564-de7df8ca37d1.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/1f09bade-4ee5-4ccf-8e64-a7730583e32f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/25156a2d-d642-4373-a6c8-ac25e45a28e2.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/a8cea2d7-ebe2-4a8b-ad18-bc5206083c8a.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/a3d363b4-eeb3-4c8d-a57d-1d528da7258d.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/fe8d7121-81de-4594-beee-4e908b83d138.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/5f795810-d7eb-4a4e-a861-05a8338d2cdf.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/74f99940-445d-4ecd-af3b-88b38de0aaa3.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/076e720e-8cf2-4f13-a222-0dca364c162f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/2dc37467-977e-40cc-ac5f-34015397083d.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/ceacce77-23e9-4e89-8c27-6a700a468174.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/2ee6a9a7-9c77-4a88-9a00-8f75fa04e560.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/36786534-69f8-4f77-a73c-da870315a528.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/ae5e1e3c-294a-41e5-840e-5eeb4555bc1e.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/db6f80c3-a4ec-4373-992f-55a7b9d3d91a.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "DealerLogo",
+          "url": "https://billeder.bilbasen.dk/bilinfo/7b628bc5-cff7-4290-b31d-78f5c6bc71e7.jpg?class=S400X400"
+        }
+      ],
+      "price": {
+        "price": 424900.0,
+        "displayPrice": "424.900 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB250+",
+      "variant": "AMG Premium 5d",
+      "doors": 5,
+      "description": "Komfort/Teknik: 5 års fabriksgaranti fra første registrering – kan forlænges op til 10 år, AMG Premium, Førerassistentpakke Plus, Active Distance Assist DISTRONIC, Panorama el-skydetag, Head-up display, LED High performance forlygter, Adaptiv fjernlysassistent, Active Steering Assist, Blind Spot Assist, Active Lane Keeping Assist, Elektrisk justerbart førersæde med memory, Elektrisk justerbart passagersæde, Keyless Go, Forrudeviskeranlæg el-opvarmet, 10.25\" digitalt instrumentdisplay, 10.25\" mediadisplay, MBUX interiørassistent, Burmester Soundsystem, MBUX Multimedia system, MBUX multimedia system, Smartphone integrationspakke, Apple Carplay, THERMOTRONIC klimaanlæg (2 zoner), DAB-radio, Parkeringspakke med 360° kamera, Parking Assist, MBUX augmented reality, Færdselstavleassistent, Opvarmet multifunktionsrat, Sportssæder, Sædekomfortpakke, 4-vejs lændestøtte, Opvarmede forsæder, Midterarmlæn bag med kopholdere, Justerbart bagsæde, Opbevaringspakke, EASY-PACK bagklap, Opbevaringsnet bag forsæder, Elektrisk sammenklappelige sidespejle, Regnsensor, Dobbelt kopholder, Trådløs opladning af smartphone foran, USB-pakke Plus, 12V-stik i bagagerum, Dobbelt solskærm, Lys- og synpakke, \n\nDesign: Mountaingrå metallak, AMG Designlinje, Nightpakke, 18\" AMG letmetalfælge i 5-eget design, ARTICO kunstlæder/DINAMICA mikrofiber sort, Taghimmel sort, Fladbundet multifunktionssportsrat i nappalæder, AMG bundmåtter, Interiørliste med stjernemønster belyst, Interiørlister med belysning, Varmeisolerende og mørktonede ruder, Ambiente belysning (64 farver), Tagræling i sort, Projektion af logo, Belyste trinlister med logo, \n\nSikkerhed/miljø: Fodgængerbeskyttelse, PRE-SAFE, ISOFIX, Dæktryksovervågning, Knæairbag, Akustik advarsel, TIREFIT, Bagsædeseleindikator, Ladekabel (8 meter) til wallbox og offentlig ladning.",
+      "location": {
+        "lat": 55.744602,
+        "lon": 9.584339,
+        "zipCode": 7100,
+        "city": "Vejle",
+        "region": "Syd- og Sønderjylland"
+      },
+      "details": [
+        {
+          "displayText": "2/2024"
+        },
+        {
+          "displayText": "14.000 km"
+        },
+        {
+          "displayText": "535 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [],
+      "isFavorite": false,
+      "sellerType": "Forhandler",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "2/2024",
+          "displayTextShort": "2/2024"
+        },
+        "mileage": {
+          "displayTextLong": "14.000 km",
+          "displayTextShort": "14.000 km"
+        },
+        "hk": {
+          "displayTextLong": "190 hk",
+          "displayTextShort": "190 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.400 kg trækvægt",
+          "displayTextShort": "1.400 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 8,9 sek",
+          "displayTextShort": "8,9 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 535 km",
+          "displayTextShort": "535 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "70 kWh batteri",
+          "displayTextShort": "70 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    },
+    {
+      "externalId": 6568766,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb250/amg-premium-5d/6568766",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/9c828eb1-6b52-43f7-b363-0285dfe84de7.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/79d00088-bd48-4a02-911d-1e9010f2e9ff.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/8c30c7f7-a349-44de-8fc5-814f8d9155db.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/70aecf2e-c71f-40df-8e39-1b9dbe136b58.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/16f0fbad-18a4-45be-a354-6de5b28da797.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/38ec44d3-60ff-420c-9f3e-a21b6d1096e0.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/eac74183-f53c-414a-bf50-6ba91421ed30.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/929b9bc0-74b9-4598-b356-f03d24f26595.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/22aee0d1-5c9c-4f8e-a631-2dcd61834f4a.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/7f226563-89a5-4345-b20b-db6dbff032e5.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/bfe5fb65-f177-401d-8909-a12f4d75afe6.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/2d06a433-4171-4b81-be98-17367f2a45b7.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/ba1f5f82-d750-466e-8f97-e77f418719d8.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/e12c71af-835c-4ab5-9cca-9d181286d1eb.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Video",
+          "url": "https://view.vzaar.com/a79adcd2-1af2-dbcc-7a57-6d6fa593b0b0/player?apiOn=true",
+          "thumbnailUrl": "https://view.vzaar.com/a79adcd2-1af2-dbcc-7a57-6d6fa593b0b0/thumb",
+          "mediaProvider": "Vzaar",
+          "id": "a79adcd2-1af2-dbcc-7a57-6d6fa593b0b0"
+        },
+        {
+          "mediaType": "DealerLogo",
+          "url": "https://billeder.bilbasen.dk/bilinfo/4293469a-ce16-4962-8316-dfea15d8732b.jpg?class=S400X400"
+        }
+      ],
+      "price": {
+        "price": 429900.0,
+        "displayPrice": "429.900 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB250+",
+      "variant": "AMG Premium 5d",
+      "doors": 5,
+      "description": "Fremhævet udstyr: Digitalhvid metallak, Førerassistentpakke, AMG læderkabine, 20\" AMG alufælge, Augmented Reality, Panorama glastag, el indst. førersæder m. memory, headup display, Burmester Surround Soundsystem, Keyless Go komfortpakke, 360° kamera, kørecomputer, digitalt cockpit, bagagerumsdækken, akustikglas i for, multifunktionsrat, læderrat, el-justerbar lændestøtte, splitbagsæde, mørk loftbeklædning, ambiente belysning, el-klapbare sidespejle m/varme, led kørelys, fuld led forlygter, led baglygter, tagræling, mørktonede ruder i bag, automatgear, varme i rat, 2 zone klima, elektrisk kabinevarmer, varmepumpe, fjernb. centrallås, nøglefri adgang, nøglefri tænding, adaptiv fartpilot med kø-assistent, aut. nedbl. bakspejl, udv. temp. måler, sædevarme, el-ruder, el betjent bagklap, fod betjent bagklap, elektrisk parkeringsbremse,  trådløs mobilopladning, automatisk forvarmning af batteri, type-2 ladekabel, app integration, dab+ radio, navigation, håndfrit til mobil, musikstreaming via bluetooth, android auto, apple carplay, usb-c tilslutning, regnsensor, automatisk parkeringssystem, 360° kamera, bakkamera, parkeringssensor (bag), parkeringssensor (for), dæktryksmåler, træthedsregistrering, førerovervågning med advarsel, skiltegenkendelse, intelligent hastighedsassistent, isofix, automatisk lys, fjernlysassistent, 7 airbags, antispin, esp, city steering, vognbaneassistent, blindvinkelsassistent, automatisk nødbremsesystem, stemmebetjening, auto hold, automatisk nødassistent.",
+      "location": {
+        "lat": 56.458687,
+        "lon": 9.372709,
+        "zipCode": 8800,
+        "city": "Viborg",
+        "region": "Østjylland"
+      },
+      "details": [
+        {
+          "displayText": "1/2024"
+        },
+        {
+          "displayText": "11.000 km"
+        },
+        {
+          "displayText": "535 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [
+        "HasVideo"
+      ],
+      "isFavorite": false,
+      "sellerType": "Forhandler",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "1/2024",
+          "displayTextShort": "1/2024"
+        },
+        "mileage": {
+          "displayTextLong": "11.000 km",
+          "displayTextShort": "11.000 km"
+        },
+        "hk": {
+          "displayTextLong": "190 hk",
+          "displayTextShort": "190 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.400 kg trækvægt",
+          "displayTextShort": "1.400 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 8,9 sek",
+          "displayTextShort": "8,9 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 535 km",
+          "displayTextShort": "535 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "70 kWh batteri",
+          "displayTextShort": "70 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    },
+    {
+      "externalId": 6577360,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb250/amg-premium-5d/6577360",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/48938f27-fc15-4556-bdd5-92f569b46f2d.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/d2c97090-0204-465c-8733-21b02d38422f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/6a5a9f1b-220b-49bf-aeec-2221a962c9a4.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/24cb3e3a-86e2-4618-8e80-6e29f94c3210.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/9e55cf7b-137e-4def-a061-88fc0f7e16e9.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/64b7a483-45b1-4405-906d-bc6601837974.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/53b2b4c8-f324-41c5-9157-0c508e134847.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/666508cd-0d54-435e-bb24-9651fc075067.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/f32a0229-4ff7-4473-a03d-88124a2c43d5.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/e792d6e3-1092-4697-a6a6-6fb725ec115f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/242a91b0-215e-4ca5-ad1b-20b58f8f5658.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/f5de6e09-27cf-4c5d-bd72-98333affab86.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/cc9f8a22-8749-4d41-a718-db8f984c5f13.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/f1c6ec23-9d60-4d52-9588-679bc3ba3ac1.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/6a9d1481-31ed-4aef-bd18-ec220f0d2b98.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/03d076c2-540f-46ed-b0d9-bd76181f6972.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/940c3ed2-67d2-4037-b4e3-91c2dd08d532.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/75b04976-9dbd-4faa-8e5a-60816055e910.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/1fdc43a6-716f-4654-b7c4-9a75d4f731ec.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/f35768cf-a755-4d39-96a8-3229350a58f1.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/5e4f35ab-f0f1-4f15-91a2-c4b7b42236d9.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/8b55e53e-7081-4529-b53c-85420a9ef968.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/e087eb59-5dda-4dc0-b263-ca15fb9c1ab5.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/46be7a63-1091-41bb-923b-963a592e9bdd.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "DealerLogo",
+          "url": "https://billeder.bilbasen.dk/bilinfo/de9cd4f1-736d-401b-9daf-5d6ef706ad66.jpeg?class=S400X400"
+        }
+      ],
+      "price": {
+        "price": 409900.0,
+        "displayPrice": "409.900 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB250+",
+      "variant": "AMG Premium 5d",
+      "doors": 5,
+      "description": "BEMÆRK DENNE 2025 MODEL FACELIFTET EQB250+ AMG PREMIUM - BEMÆRK UDSTYRSPAKKER. \n- ORIGINALT SVINGBART ANHÆNGERTRÆK - HUD HEAD UP DISPLAY - ELEKTRISKE FORSÆDER MED MEMORY OG SÆDETEKNIK - BURMEISTER SOUNDSYSTEM - 360' KAMERA - NIGHTPAKKE - KEYLESS ENTRY - VINTERPAKKE - RAT VARME - NAVIGATION LVE ETC. \n\n- Elektrisk rækkevidde - 488 km\n- Elektrisk rækkevidde i byområder - 641 km\n\nHighligts:\n✅ Premium-udstyrspakke\n✅ ACC adaptiv fartpilot DISTRONIC med køfunktion (Mercedes me connect)\n✅ Design- og udstyrslinje AMG Line\n✅ Front- og bagkofanger i AMG-design\n✅ Burmester surround-system\n✅ HUD head-up-display\n✅ EL parkeringspakke med 360° kamera\n✅ Elektrisk svingbart anhængertræk\n✅ Kameraer med 360° visning\n✅ Aktiv parkeringsassistent\n✅ MBUX digitalt multimediesystem med udvidet stemmestyring (MBUX)\n✅ MBUX interiørassistent\n✅ MBUX Augmented Reality til navigation\n✅ Keyless-Go-pakke (nøglefri start og adgang)\n✅ Automatisk åbning/lukning af bagklap (Hands-Free Access)\n✅ Vinterpakke: Ratvarme, opvarmet sprinkleranlæg\n✅ El-justerbart forsæde venstre med memory og elektrisk justerbar lændestøtte foran\n✅ Night-pakke: Sorte sidespejle, sort højglans tagræling\n✅ Komfortsædepakke\n✅ Nappalæderrat (fladt forneden)\n✅ Multifunktions sportsrat\n✅ Sportsforsæder\n✅ Sædevarme foran\n✅ Induktiv opladning af smartphone\n✅ LED High Performance-forlygter med adaptive fjernlysassistent\n✅ Live Traffic trafikinformation\n✅ Harddisknavigation\n✅ Aktiv vognbaneassistent, aktiv styreassistent, aktiv hastighedsbegrænser, udkørselsadvarsel, trafikskiltegenkendelse\n✅ Lys- og synspakke\n✅ Bagagerumspakke\n✅ 18\" letmetalfælge (AMG, 5-eget design)\n✅ Ambientebelysning Plus med direkte lyslinje\n✅ Infotainment-system: Remote & Charging Services Premium\n✅ Smartphone-integration: Apple CarPlay og Android Auto (Mercedes me connect)\n✅ Touchpad i midterkonsol\n✅ Digitalt instrumentdisplay\n✅ Media-display\n✅ Klimaautomatik (Thermotronik)\n✅ AMG-gulvmåtter\n✅ Indstigningslys med logo-projektion\n✅ Kommunikationsmodul (LTE) forberedt til Mercedes me connect\n✅ Elektronisk stabilitetsprogram (ESP)\n✅ PRE-SAFE sikkerhedssystem\n✅ Komfortundervogn (Agility Control)\n✅ Metallic-lakering\n✅ Sportsdesign-pedaler i rustfrit stål\n✅ El-justerbare og opvarmede sidespejle\n✅ Regnsensor til vinduesviskere\n✅ Mørktonede sideruder bag og bagrude\n✅ Belyste indstigningslister i rustfrit stål\n✅ Belyste dekorlister\n✅ Spejlpakke: el-klapbare sidespejle, auto-nedblænding indv./udv.\n✅ Loftbeklædning i sort\n✅ Køreprogramvælger (Agility Select / Dynamic Select)\n✅ 12V stik i bagagerum\n✅ Ladekabel med Schuko-stik\n✅ DAB-digital radio\n✅ Sædeindtræk: Artico kunstlæder / Dinamica mikrofiber\n\nStandardudstyr:\nAirbag fører-/passagerside, Akustisk omgivelseslyd (udvendig lyd), Bækkenairbag foran (Pelvisbag), Justerbart bagsæde (forskydeligt), El-ruder for og bag, Bagagenet/lomme på forsædernes ryglæn, Dobbelt kopholder foran, Dæktrykskontrolsystem, Knæairbag på førerside, Hovedairbag-system (Windowbag), Solskærme med oplyst makeup-spejl, Mercedes-Benz nødopkaldssystem, Midterarmlæn bag, Dækreparationssæt (Tirefit), Bagsæde delt/nedfældeligt (40:20:40), Midterkonsol foran med rullelåg og opbevaring, Sideairbags foran.\n\nAttraktive Tilbud hos Globus Biler\n\nFinansiering\n\n💳 Attraktiv finansiering med 0 kr. eller 20% udbetaling\n💼 Samarbejde med AL Finans, Santander og Nordania Finans\n\nForsikring\n\n🛡️ Skarpe forsikringstilbud, der passer til dig\n\nLadeløsninger til elbiler\n\n⚡ Vi tilbyder løsninger fra NORLYS, OK, CLEVER og LOOAD\n\nUdvidet Garanti\n\n🔒 Ekstra tryghed med FRAGUS Brugtvogns Forsikring\n\nBook en Prøvekørsel\n\n🚗 Kontakt os for at booke en aftale og undgå ventetid.\n🌐 Se alle vores biler: www.globus.dk\n\nKontakt Os\n\n📍 Adresse: Navervej 4-6, 8600 Silkeborg\n📞 Telefon: +45 86 82 80 00\n✉️ E-mail: salg@globus.dk\n\nÅbningstider\n\n🕒 Mandag - Fredag: 09:00 - 17:30\n🕒 Lørdag - Søndag: 11:00 - 16:00\n",
+      "location": {
+        "lat": 56.183025,
+        "lon": 9.53595,
+        "zipCode": 8600,
+        "city": "Silkeborg",
+        "region": "Østjylland"
+      },
+      "details": [
+        {
+          "displayText": "5/2024"
+        },
+        {
+          "displayText": "28.000 km"
+        },
+        {
+          "displayText": "488 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [],
+      "isFavorite": false,
+      "sellerType": "Forhandler",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "5/2024",
+          "displayTextShort": "5/2024"
+        },
+        "mileage": {
+          "displayTextLong": "28.000 km",
+          "displayTextShort": "28.000 km"
+        },
+        "hk": {
+          "displayTextLong": "190 hk",
+          "displayTextShort": "190 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.400 kg trækvægt",
+          "displayTextShort": "1.400 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 8,9 sek",
+          "displayTextShort": "8,9 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 488 km",
+          "displayTextShort": "488 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "70 kWh batteri",
+          "displayTextShort": "70 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    },
+    {
+      "externalId": 6591359,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb250/amg-line-7prs-5d/6591359",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/1bf10cdf-b401-4e41-8bf3-bdb26262b40f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/7df5bf4d-0fb0-4d1a-ac4a-8ca0f48953e8.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/903493dd-ee94-4d04-b5e2-561073251f35.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/ac50d455-327d-4366-870d-1e0bb96ce659.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/89ebd1fc-4d82-44e6-9b1e-e57713ee42c8.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/b208b05e-3c4f-487a-a19d-3ea582ef37f8.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/918ba1eb-c684-485a-82b8-6989bd60a63d.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/2223b9cd-4fbf-4e68-a403-ffae4649c6a8.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/764c3925-957a-4801-b35f-47db245836e1.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/9e230193-8723-4f7a-803e-59c3285ca44c.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/32a6e2ce-9694-45e6-a86d-8663096d602f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/9e679b46-1ed5-42f2-a21c-2708365b402a.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/4f0e85e2-1ef5-4049-962c-3c785e011ea2.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/c1b9f8b8-439e-4e4b-bd8b-740d9ed8de84.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/bfeaa833-a4d3-48a2-b304-9e1b88966b01.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/02506404-dd81-4ea0-8358-45fd8c7c6490.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/3be59b12-02b4-420d-98e4-23faf31a4909.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/a9a23312-4f3f-44f4-92cf-ff46160ad151.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "DealerLogo",
+          "url": "https://billeder.bilbasen.dk/bilinfo/54515b39-58b8-4176-9a22-11a28d863429.jpg?class=S400X400"
+        }
+      ],
+      "price": {
+        "price": 399900.0,
+        "displayPrice": "399.900 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB250+",
+      "variant": "AMG Line 7prs 5d",
+      "doors": 5,
+      "description": "OBS!! På vej ind!\n\nFacelifted Mercedes EQB 250+\nElektrisk rækkevidde: 503 km (WLTP)\n\nHighlights:\n- 7 pers\n- AMG line\n- Augmented Reality (HUD)\n- Apple Carplay / Android Auto\n- 19\" Alufælge\n- 360-kamera\n- Klima anlæg\n- Vejbaneassistent\n- Sædevarme for\n- Fartpilot\n- Navigation\n- Digital instrumentering\n- Og meget mere!\n\n\n✅ Finansiering med og uden udbetaling\n\n✅ Vi tager gerne din nuværende bil i bytte\n\n✅ Gør ligesom mange andre af vores kunder - få en attraktiv serviceaftale til bilen, der matcher dine ønsker og behov!\n\n⭐️⭐️⭐️⭐️⭐️ Vi har høj kundetilfredshed på Trustpilot\n\nSalgsafdeling har åben:\nAlle hverdage mellem 09:00 - 17:30\nLørdag: 11:00 - 16:00\nSøndag: 11:00 - 16:00\nKontakt os Tlf. 96 26 24 68\nherning@bn.dk\n\nAdresse\nSilkeborgvej 110\n7400 Herning\n\n✅ Chat med os på bn.dk\n\nFord, Dacia, Renault og Volvo i Herning - Danmarks (måske) flotteste bilhus!\nHos Bjarne Nielsen Herning står mere end 50 kompetente medarbejdere klar til at yde deres bedste, så også du bliver lige så tilfreds, som de mange andre kunder, der også handler hos Bjarne Nielsen. Vi er klar til at hjælpe dig videre, hvad enten det handler om køb, salg eller servicering af bil!",
+      "location": {
+        "lat": 56.134045,
+        "lon": 9.005002,
+        "zipCode": 7400,
+        "city": "Herning",
+        "region": "Vestjylland"
+      },
+      "details": [
+        {
+          "displayText": "3/2024"
+        },
+        {
+          "displayText": "19.000 km"
+        },
+        {
+          "displayText": "503 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [
+        "NewListing"
+      ],
+      "isFavorite": false,
+      "sellerType": "Forhandler",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "3/2024",
+          "displayTextShort": "3/2024"
+        },
+        "mileage": {
+          "displayTextLong": "19.000 km",
+          "displayTextShort": "19.000 km"
+        },
+        "hk": {
+          "displayTextLong": "190 hk",
+          "displayTextShort": "190 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.400 kg trækvægt",
+          "displayTextShort": "1.400 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 8,9 sek",
+          "displayTextShort": "8,9 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 503 km",
+          "displayTextShort": "503 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "70 kWh batteri",
+          "displayTextShort": "70 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    },
+    {
+      "externalId": 6517625,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb250/amg-line-advanced-plus-5d/6517625",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/0a6a88f5-69cc-4f06-901d-a95d6f56a3db.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/c51352e9-8121-4122-b0ae-f0e6a2e371ee.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/9e06fad4-b870-42d5-afa4-ac324059c023.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/013c01d9-a538-4707-a473-c78c9169f5b3.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/07e04dae-7472-4eaf-aba0-d2f39686db7e.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/1aa5fdbe-d79e-4af2-87f3-89b429b05f58.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/0caf787f-a045-4bad-b390-39ddeb9db2b8.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/0b997d5a-625c-4981-b4e4-1f6a49530d80.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/d675f042-4312-4b20-bfbb-cd808b637b49.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/1d6e5a41-a3c9-4393-9005-d97280213c9f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/44d26da4-6214-4d28-b868-f76c8fa4a8b8.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/faea6f86-82df-4181-8cda-b5fb652efd8a.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/02da9bb9-c6f6-4866-8f18-0dd19cd6e519.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/7db4463f-fce5-420b-b77d-b37fdc7ae205.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/69d27e44-5e41-4a7e-85c2-a37ed5ecce6d.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/124a2c23-0faf-4754-80ab-cd551b2bab6f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/3818ec03-32ae-4db9-b1c3-4309383cdae7.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/48e77dfc-a6cf-46e1-95bd-aed8b82c4572.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "DealerLogo",
+          "url": "https://billeder.bilbasen.dk/bilinfo/d6ea93a7-ec65-4843-9924-3a81f7de7155.jpeg?class=S400X400"
+        }
+      ],
+      "price": {
+        "price": 354900.0,
+        "displayPrice": "354.900 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB250+",
+      "variant": "AMG Line Advanced Plus 5d",
+      "doors": 5,
+      "description": "🚙 Mercedes EQB 250+ med lang rækkevidde! Kun kørt 23.000 og er PROPPET med lækkert udstyr. Det er den nye Modelår 2024! Rækkevidde op til 531 km\n\n✅ MULIGHED FOR ANHÆNGERTRÆK TIL 1400 KG! (kan tilkøbes)\n✅ Mulighed for at tilkøbe op til 4 års ekstra garanti gennem Fragus!\n\nBilen er spækket med udstyr, men bemærk især dette \n⭐️ Adaptiv Fartpilot\n⭐️ Vinter pakke - Sædevarme og ratvarme\n⭐️ Advantage Plus pakke - KEYLESS-GO komfortpakke med hands-freeaccess, soundssystem og trådløs opladning\n⭐️ Førerassistentpakke\n⭐️ Ambiente belysning\n⭐️ Sort loft himmel\n⭐️ Elektrisk bagklap \n⭐️ Blind Vinkel Sensor\n⭐️ Parkeringssensor for/bag samt kamera \n⭐️ Navigation\n⭐️ Nøglefri start\nOg meget mere \n\nVi tilbyder altid attraktive finansieringsmuligheder med eller uden udbetaling.\nHar du en bil, så tager vi naturligvis gerne den i bytte. 🚘\n\nBook en prøvetur i bilen allerede i dag hos Karvil \n📍 Faaborgvej 149, 5250 Odense SV\n📞 66 17 00 80\n📩 Faaborgvej@karvil.dk\n\nVi har åbent alle ugens dage! \nMandag - fredag: 9 - 17:30\nLørdag - søndag: 11 – 16\n\nKøb trygt og sikkert bil hos Karvil - kunderne har talt på trustpilot. ⭐️⭐️⭐️⭐️⭐️\nSe alle vores brugte biler på karvil.dk/brugte-biler\n\nVi ses!",
+      "location": {
+        "lat": 55.365273,
+        "lon": 10.353862,
+        "zipCode": 5250,
+        "city": "Odense SV",
+        "region": "Fyn"
+      },
+      "details": [
+        {
+          "displayText": "3/2024"
+        },
+        {
+          "displayText": "23.000 km"
+        },
+        {
+          "displayText": "503 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [],
+      "isFavorite": false,
+      "sellerType": "Forhandler",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "3/2024",
+          "displayTextShort": "3/2024"
+        },
+        "mileage": {
+          "displayTextLong": "23.000 km",
+          "displayTextShort": "23.000 km"
+        },
+        "hk": {
+          "displayTextLong": "190 hk",
+          "displayTextShort": "190 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.400 kg trækvægt",
+          "displayTextShort": "1.400 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 8,9 sek",
+          "displayTextShort": "8,9 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 503 km",
+          "displayTextShort": "503 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "70 kWh batteri",
+          "displayTextShort": "70 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    },
+    {
+      "externalId": 6435335,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb350/amg-premium-4matic-5d/6435335",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/d2c009d9-47fc-43c3-8159-8f6e62e295e2.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/9024cb86-8cf3-4ead-b394-1c61c0625c6d.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/9caf2115-e78c-4c65-8a86-f5ceb173b1e7.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/0bc1072c-5fe2-4530-b59c-03cb1bd2e728.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/bd03063a-47b4-4479-950f-518c5d5e3086.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/0c138caa-ab04-4324-928c-8f7be2c44f92.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/aaddc57f-8683-4078-88bc-6d1a44d04b68.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/e67243ba-0b8e-461a-b18c-eb5cff9da1b4.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/ff30aa48-166a-4c32-b61a-949f9c21e2e6.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/602f370c-fa49-4ad7-8a0d-6c460f4f2f6c.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/a8a13395-2263-48e1-a0f4-8702e56ff98c.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/bea79d07-89d1-4a08-8277-8ff15398e072.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/864fee9a-158c-4740-b381-b20385770ede.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/10969eb3-5492-4376-a301-7cb31558e004.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/f02fcfa8-d050-413d-8098-252b91f398f7.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/22160286-0188-4b65-855f-6c165fd206c2.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/0108e94e-e4c2-41b2-afc4-a3a7b62f2ea4.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/5f6c1619-eb0f-4c39-b055-7bf2f72263e0.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "DealerLogo",
+          "url": "https://billeder.bilbasen.dk/bilinfo/b299ce7d-34f5-42c8-8363-c92a201e508a.jpg?class=S400X400"
+        }
+      ],
+      "price": {
+        "price": 449900.0,
+        "displayPrice": "449.900 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB350",
+      "variant": "AMG Premium 4Matic 5d",
+      "doors": 5,
+      "description": "Bemærk Highlights bedst udstyret: \n- PREMIUM UDSTYRS PAKKE\n- FØRERASSISTENT PAKKE\n- Panorama skydeglas\n- Adaptiv fartpilot\n- Aktiv styre assist\n- Navigation\n- High Performance LED\n- EL JUSTB. FORSÆDER M. MEMORY\n- Head-Up display\n- Burmester Sound System\n- Chassisdæmpningssystem med valgfrie niveauer (komfort + sport).\n- 360 graders kamera\n- Bakkamera\n- Apple CarPlay / Android Auto\n- Trådløs mobiloppladning\n- Aktiv parkerings assist\n- Aktiv vognbane assist\n- Adaptiv fjernlys assist\n- Blindvinkels assist\n- Parkeringssensor PDC\n- El bagklap\n- Automatisk klima anlæg\n- Sædevarme + RATVARME\n- Keyless Start/Stop\n- Ambiente-belysning\n- Elektrisk kabinevarmer\n- DAB radio\n- Regnsensor\n- 20\" Orig. AMG Alufælge\n- POLARWEISS - UNILACK\n- Estm. rækkevidde 447 km\n- ATTRAKTIV FINANSIERING TILBYDES!!\n- UDVIDET GARANTI KAN TILKØBES!!\n\n12 MÅNEDERS ERHVERVSLEASING\nMånedlig ydelse: kr. 3.850,- eks. moms\nEngangsydelse: kr. 40.000,- eks. moms\nRestværdi: kr. 280.000,- eks. moms eks. afgift\nAttraktiv beskatning / forsikring\n\n12 MÅNEDERS PRIVATLEASING\nMånedlig ydelse: kr. 4.812,- inkl. moms\nEngangsydelse: kr. 50.000,- inkl. moms\nRestværdi: kr. 280.000,- eks. moms eks. afgift\n\nKaskoforsikring via Codan fra 778,- pr. mdr.\n\naut., 20\" alufælge, varme i rat, fuldaut. klima, elektrisk kabinevarmer, fjernb. c.lås, kørecomputer, infocenter, startspærre, auto. nedbl. bakspejl, udv. temp. måler, regnsensor, sædevarme, el indst. forsæder, el indst. førersæde, el indst. førersæde m. memory, soltag, el-soltag, glastag, 4x el-ruder, el-klapbare sidespejle m. varme, automatisk parkerings system, 360° kamera, bakkamera, parkeringssensor (for), parkeringssensor (bag), adaptiv fartpilot, el betjent bagklap, dæktryksmåler, elektrisk parkeringsbremse, træthedsregistrering, skiltegenkendelse, dab radio, navigation, multifunktionsrat, håndfrit til mobil, bluetooth, musikstreaming via bluetooth, headup display, digitalt cockpit, android auto, apple carplay, trådløs mobilopladning, usb tilslutning, isofix, armlæn, bagagerumsdækken, kopholder, dellæder, kunstlæder, læderrat, splitbagsæde, led kørelys, fjernlysassistent, fuld led forlygter, airbag, abs, antispin, esp, servo, vognbaneassistent, blindvinkelsassistent, automatisk nødbremsesystem, tagræling, tonede ruder, ikke ryger",
+      "location": {
+        "lat": 56.24245,
+        "lon": 9.864175,
+        "zipCode": 8450,
+        "city": "Hammel",
+        "region": "Østjylland"
+      },
+      "details": [
+        {
+          "displayText": "1/2024"
+        },
+        {
+          "displayText": "10.000 km"
+        },
+        {
+          "displayText": "447 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [],
+      "isFavorite": false,
+      "sellerType": "Forhandler",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "1/2024",
+          "displayTextShort": "1/2024"
+        },
+        "mileage": {
+          "displayTextLong": "10.000 km",
+          "displayTextShort": "10.000 km"
+        },
+        "hk": {
+          "displayTextLong": "292 hk",
+          "displayTextShort": "292 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.700 kg trækvægt",
+          "displayTextShort": "1.700 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 6,2 sek",
+          "displayTextShort": "6,2 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 447 km",
+          "displayTextShort": "447 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "66 kWh batteri",
+          "displayTextShort": "66 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    },
+    {
+      "externalId": 6558916,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb300/amg-line-4matic-5d/6558916",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/79333fe5-bc14-401f-9d43-435944569abe.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/a4b50abd-e3a5-4001-a0de-ed36e09f9cce.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/81d36d83-29e3-45fc-b3f1-1489ff000837.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/aaa7fad9-7d68-4c7b-8cd0-9e8954ae8a5f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/7e431a61-3dec-4c91-83a7-679d2a00f163.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/e642ab99-16f8-4700-8229-ceba2a04e25d.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/8d27f197-f3b9-40c9-9909-d2cdf5e88f7b.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/7b31ba6e-8849-4acc-b11a-bd4a5ca6a871.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/87176df9-94d6-4c06-b19b-c2831b454a87.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/16868625-943b-455e-907d-ef71f2dafafd.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/ab9bad75-84a6-4b37-825e-fca737e3e40c.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/31145c60-0294-4492-a499-ee12149e1ba8.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/1ec67ea5-7b3f-4e05-9425-a10d93f742d5.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/27381b0b-0446-426b-a6d2-0dd3bae1000b.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/2437c6bd-fe9f-48cd-a0b5-31654427f445.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/e549a014-0bc9-4410-a588-cf1a7c5bbaf6.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/3eb5b68f-8577-4b5a-9524-2d3a2b6f15cc.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/b7a4f67c-f210-4bb9-b29a-8937b9f49868.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/c5991369-d692-4afa-82d3-5e17a9c0d55f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/a8d1e50c-80f1-4dac-ad88-3d5531a0749b.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/f801d2e9-e95a-4aa9-ac3a-2f7ad3c0cb4a.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/f87888d2-f372-4450-be60-b64b11904fbb.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/aa6cbae9-471d-4eb4-bcd3-612c13c442b3.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/a30607c9-3bf1-4ade-82db-5e5e48d11469.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "DealerLogo",
+          "url": "https://billeder.bilbasen.dk/bilinfo/00827547-2969-4733-8108-4a146331c1a7.jpg?class=S400X400"
+        }
+      ],
+      "price": {
+        "price": 449900.0,
+        "displayPrice": "449.900 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB300",
+      "variant": "AMG Line 4Matic 5d",
+      "doors": 5,
+      "description": "TIDSBEGRÆNSET KAMPAGNE: \nFinansiering til fast rente fra kun 2,99%\n\nUDSPECIFICERING AF NYPRIS: \n•\tVejledende nypris kr. 639.978 - spar kr. 220.078 (34%)\n•\tGrundpris kr. 494.898\n•\tAMG Premium kr. 56.022\n•\t20\" AMG letmetalfælge kr. 17.832\n•\tPanorama elektrisk skydetag kr. 17.832\n•\tAMG læderpakke kr. 14.712\n•\tJusterbar affjedring kr. 14.712\n•\tPatagoniarød metallak kr. 11.040\n•\tParkeringspakke med 360 graders kamera kr. 6.093\n•\tSmartphone integrationspakke kr. 4.458\n•\tNightpakke kr. 2.230\n\nBEMÆRK: \n•\t2024 facelifted version \n•\tAMG eksteriør og interiør\n•\tPanoramaglassoltag med vippe funktion\n•\tBurmester® surround sound system\n•\tAMG læderpakke inkl. sort læder indtræk\n•\tElektriske justerbare forsæder inkl. memory\n•\t20\" letmetalfælge i 5-eget design\n•\tKomfortundervogn med indstillingsdæmpning\n•\tHead-Up display\n•\tKeyless Go pakke inkl. sensorstyret elektrisk bagklap\n•\tParkeringsassistent med 360 graders bakkamera\n\nØVRIG BESKRIVELSE: \nPatagonienrødmetal, sort læder, adaptiv fartpilot med aktiv vognbaneassistent, LED high performance lygter med fjernlysassistent, memory-pakke i førersæde og sidespejle, smartphone integrationspakke med Apple CarPlay og Android Auto, blindvinkelsassistent, mørketonede ruder bag, vario-bagsæde, logo-projektion over konturlampen, trådløs mobilopladning, MBUX navigation med augmented reality video, ambientebelysning i 64 farver, forklimatisering via app, nøgle og timer, widscreen display med 10.25\" skærme, sædevarme for, multimediesystem, parkeringssensor for og bag, udstigningsadvarsel, multifunktionssupersportsrat i nappa læder, færdselstavleassistent, sort taghimmel, akustisk miljøbeskyttelse, 2-zonet klimaautomatik THERMATIC, bagagenet på ryglæn, nightpakke, bagagerumspakke, sædekomfortpakke, lys- og synspakke, parkeringspakke high, tagræling, spejlpakke, dæktryksmåler, el-bagklap, baggrundsbelyste pynteelementer i stjernedesign, stop-and-go-trafik, kopholder, bluetooth, el-parkeringsbremse, kollisionadvarsel med bremseindgreb, træthedsregistrering, Remote & Charging Services Premium, USB-C tilslutning, lys- og regnsensor, aut. nedbl. bakspejl, lændestøtte for, Mercedes-Benz nødopkaldssystem, DAB-radio, kommunikationsmodul LTE til Mercedes me connect, 12V stikdåse, ISOFIX, m.m.\n\nGULPLADEBIL: \nErhvervskøb kr. 359.900 ex. moms (moms kr. 87.475).\n\nPAPEGØJEPLADER: \nPrivatkøb kr. 447.375 inkl. moms. \n\nImportbil - bilen kan variere fra dansk model.\n\nNYHEDSMAIL:\nSe nye biler på lager hver torsdag - tilmeld på sandjensen.dk/news.",
+      "location": {
+        "lat": 56.184357,
+        "lon": 9.54394,
+        "zipCode": 8600,
+        "city": "Silkeborg",
+        "region": "Østjylland"
+      },
+      "details": [
+        {
+          "displayText": "3/2024"
+        },
+        {
+          "displayText": "5.000 km"
+        },
+        {
+          "displayText": "447 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [],
+      "isFavorite": false,
+      "sellerType": "Forhandler",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "3/2024",
+          "displayTextShort": "3/2024"
+        },
+        "mileage": {
+          "displayTextLong": "5.000 km",
+          "displayTextShort": "5.000 km"
+        },
+        "hk": {
+          "displayTextLong": "228 hk",
+          "displayTextShort": "228 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.700 kg trækvægt",
+          "displayTextShort": "1.700 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 8,0 sek",
+          "displayTextShort": "8,0 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 447 km",
+          "displayTextShort": "447 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "66 kWh batteri",
+          "displayTextShort": "66 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    },
+    {
+      "externalId": 6513854,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb250/amg-premium-5d/6513854",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/b2450c2d-2d9b-45e4-ba48-fddb9dd91904.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/2c01006e-c6c9-4447-bee3-2ac17b30c373.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/e6ffc55f-7cf0-40fb-92cf-359518ef6b68.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/34fa4a33-5e2c-4ed4-a158-a6b3ff1cdc60.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/72584e41-84e8-4ce5-ac14-2dd5a48e8290.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/851a388f-6240-43b9-ae1c-55ad65118347.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/124d51b3-a37a-4497-9199-644480d885f2.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/781c2b6e-6c29-4fe7-a169-12f3a6a41ca6.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/d6202e38-6915-4117-a2b1-e4d15658fcd5.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/dbc53cf4-3e0d-43a4-a2c8-d5c483a1180e.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/ebb7faba-c76e-410d-b576-ea7c8b298574.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/597015db-c4a5-4219-8ef0-c3a2b368bb63.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/161e7528-cf18-4e94-9c49-60dd9fc84814.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/c5893aad-9879-4170-a081-8c385b475d38.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/cdfb2278-3f77-4521-8695-7a027353f9fe.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/0f2ed8ed-8b5f-458e-90a5-c9e29681abdc.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/c9e608a2-9fce-48e8-a1ba-8503988c586f.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilinfo/6c11d0ce-f79b-433e-b797-239c99a80ad3.jpeg?class=S640X640"
+        },
+        {
+          "mediaType": "DealerLogo",
+          "url": "https://billeder.bilbasen.dk/bilinfo/b299ce7d-34f5-42c8-8363-c92a201e508a.jpg?class=S400X400"
+        }
+      ],
+      "price": {
+        "price": 429900.0,
+        "displayPrice": "429.900 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB250+",
+      "variant": "AMG Premium 5d",
+      "doors": 5,
+      "description": "DEN NYE FACELIFTET MODEL M. PREMIUM UDSTYRS PAKKE \n\nSUPER UDSTYRET KLAR TIL LEVERING NU.\n\nBEMÆRK Highlights: \n- SVINGBART TRÆK (OP TIL 1.400KG) \n- Panorama skydeglas\n- FØRERASSISTENT PAKKE \n- Adaptiv fartpilot\n- Aktiv styre assistent\n- Navigation\n- High Performance LED\n- Head-Up Display\n- Burmester Sound System\n- EL JUSTB. FORSÆDER M. MEMORY \n- 360 graders kamera\n- Night-Pakke \n- Bakkamera\n- Apple CarPlay / Android Auto\n- Trådløs mobilopladning\n- 2 Zone klima anlæg \n- VINTERPAKKE m. bl.a. RATVARME \n- Keyless Entre/Start/Stop\n- El bagklap m. fodspark\n- Ambiente-belysning\n- Elektrisk kabinevarmer\n- 18\" Orig. AMG Alufælge\n- POLARWEISS - UNILACK\n- Estm. rækkevidde 535 km\n- ATTRAKTIV FINANSIERING TILBYDES !! \n- UDVIDET GARANTI KAN TILKØBES !! \n\nkørecomputer, digitalt cockpit, bagagerumsdækken, multifunktionsrat, læderrat, alcantaraindtræk, sportssæder, el indst. forsæder, el indst. førersæde, el indst. førersæde m. memory, justerbar lændestøtte, splitbagsæde, ambiente belysning, 18\" alufælge, soltag, el-soltag, glastag, el-klapbare sidespejle m/varme, fuld led forlygter, led kørelys, led baglygter, svingbart træk (elektrisk), automatgear, varme i rat, 2 zone klima, elektrisk kabinevarmer, fjernb. centrallås, nøglefri adgang, nøglefri tænding, adaptiv fartpilot, adaptiv fartpilot med kø-assistent, aut. nedbl. bakspejl, sædevarme, udv. temp. måler, 4x el-ruder, el betjent bagklap, fod betjent bagklap, trådløs mobilopladning, headup display, dab radio, navigation, håndfrit til mobil, apple carplay, android auto, regnsensor, automatisk parkeringssystem, bakkamera, 360° kamera, parkeringssensor (bag), parkeringssensor (for), dæktryksmåler, træthedsregistrering, skiltegenkendelse, isofix, fjernlysassistent, airbag, esp, blindvinkelsassistent, automatisk nødbremsesystem, vognbaneassistent, automatisk nødassistent, stemmebetjening",
+      "location": {
+        "lat": 56.24245,
+        "lon": 9.864175,
+        "zipCode": 8450,
+        "city": "Hammel",
+        "region": "Østjylland"
+      },
+      "details": [
+        {
+          "displayText": "5/2024"
+        },
+        {
+          "displayText": "11.500 km"
+        },
+        {
+          "displayText": "535 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [],
+      "isFavorite": false,
+      "sellerType": "Forhandler",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "5/2024",
+          "displayTextShort": "5/2024"
+        },
+        "mileage": {
+          "displayTextLong": "11.500 km",
+          "displayTextShort": "11.500 km"
+        },
+        "hk": {
+          "displayTextLong": "190 hk",
+          "displayTextShort": "190 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.400 kg trækvægt",
+          "displayTextShort": "1.400 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 8,9 sek",
+          "displayTextShort": "8,9 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 535 km",
+          "displayTextShort": "535 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "70 kWh batteri",
+          "displayTextShort": "70 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    },
+    {
+      "externalId": 6582428,
+      "uri": "https://www.bilbasen.dk/brugt/bil/mercedes/eqb250/amg-premium-5d/6582428",
+      "media": [
+        {
+          "mediaType": "Picture",
+          "url": "https://billeder.bilbasen.dk/bilbasen/2c79e649-33f8-436f-b7b0-95e42d764a8d.png?class=S640X640"
+        }
+      ],
+      "price": {
+        "price": 380000.0,
+        "displayPrice": "380.000 kr",
+        "unit": "kr",
+        "priceType": "Retail"
+      },
+      "make": "Mercedes",
+      "model": "EQB250+",
+      "variant": "AMG Premium 5d",
+      "doors": 5,
+      "description": "Mercedes EQB250+ AMG Premium. \n\nBilen har kørt lige omtrent 15.000 km og bliver kørt i dagligt. \n\nLidt oplysninger på bilen: \n- Polarhvid\n- Nightpakke \n- Panorama elektrisk soltag\n\n- AMG Premium der indeholder\n  - Head-up display\n  - Elektrisk fører- og passagersæde med memory\n  - 360 grades parkeringskamera\n  - Burmester lydanlæg\n  - Logo-projektor ved døråbning\n\n- Smartphone integrationspakke\n- Vinterpakke (Varme i rat)\n\nModellen er den Faceliftet EQB, der gør det muligt for eftermontering af træk.",
+      "location": {
+        "lat": 55.56928,
+        "lon": 12.213745,
+        "zipCode": 2690,
+        "city": "Karlslunde",
+        "region": "Syd- og Vestsjælland"
+      },
+      "details": [
+        {
+          "displayText": "4/2024"
+        },
+        {
+          "displayText": "15.000 km"
+        },
+        {
+          "displayText": "535 km rækkevidde"
+        },
+        {
+          "displayText": "El"
+        }
+      ],
+      "features": [],
+      "isFavorite": false,
+      "sellerType": "Privat",
+      "properties": {
+        "firstregistrationdate": {
+          "displayTextLong": "4/2024",
+          "displayTextShort": "4/2024"
+        },
+        "mileage": {
+          "displayTextLong": "15.000 km",
+          "displayTextShort": "15.000 km"
+        },
+        "hk": {
+          "displayTextLong": "190 hk",
+          "displayTextShort": "190 hk"
+        },
+        "moth": {
+          "displayTextLong": "Ejerafgift 840 kr/år",
+          "displayTextShort": "840 kr/år"
+        },
+        "trailer": {
+          "displayTextLong": "1.400 kg trækvægt",
+          "displayTextShort": "1.400 kg"
+        },
+        "kmt": {
+          "displayTextLong": "Accel. 8,9 sek",
+          "displayTextShort": "8,9 sek"
+        },
+        "electricmotorrange": {
+          "displayTextLong": "Rækkevidde 535 km",
+          "displayTextShort": "535 km"
+        },
+        "batterycapacity": {
+          "displayTextLong": "70 kWh batteri",
+          "displayTextShort": "70 kWh"
+        },
+        "geartype": {
+          "displayTextLong": "Automatisk gear",
+          "displayTextShort": "Automatisk gear"
+        },
+        "fueltype": {
+          "displayTextLong": "El",
+          "displayTextShort": "El"
+        }
+      }
+    }
+  ]
+}

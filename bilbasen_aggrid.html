@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bilbasen Cars - ag-Grid Demo</title>
+    <!-- ag-Grid Community Styles and Script -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-enterprise/dist/ag-grid-enterprise.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f7f7;
+        }
+
+        .ag-theme-alpine {
+            height: 90vh;
+            width: 95vw;
+            margin: 2vh auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            background: #fff;
+        }
+
+        .car-img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .ag-header-cell-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align:center; margin-top: 1.5rem;">Bilbasen Car Listings (ag-Grid)</h2>
+    <div id="myGrid" class="ag-theme-alpine"></div>
+
+    <!-- ag-Grid Community -->
+    <script>
+        // Helper to get the first image URL from media array
+        function getFirstImage(media) {
+            if (!media || !media.length) return '';
+            const pic = media.find(m => m.mediaType === 'Picture');
+            return pic ? pic.url : '';
+        }
+        // Helper to get mileage from properties
+        function getMileage(props) {
+            return props && props.mileage ? props.mileage.displayTextShort : '';
+        }
+        // Helper to get registration date from properties
+        function getRegDate(props) {
+            return props && props.firstregistrationdate ? props.firstregistrationdate.displayTextShort : '';
+        }
+        // Helper to get price display
+        function getPrice(price) {
+            return price && price.displayPrice ? price.displayPrice : '';
+        }
+        // Helper to parse price string to number for aggregation
+        function parsePrice(str) {
+            if (!str) return null;
+            // Remove dots and non-numeric except comma, then replace comma with dot
+            let num = str.replace(/[^0-9,]/g, '').replace(/\./g, '').replace(',', '.');
+            return parseFloat(num);
+        }
+        // Helper to parse mileage string to number for aggregation
+        function parseMileage(str) {
+            if (!str) return null;
+            // Remove dots and non-numeric except comma, then replace comma with dot
+            let num = str.replace(/[^0-9,]/g, '').replace(/\./g, '').replace(',', '.');
+            return parseFloat(num);
+        }
+        // Value parser for ag-Grid
+        function numberParser(params) {
+            if (typeof params.newValue === 'string') {
+                return parseFloat(params.newValue.replace(/[^0-9.]/g, '').replace(/\./g, ''));
+            }
+            return params.newValue;
+        }
+        function extractNumbersFromAggValues(values) {
+            const nums = [];
+            for (const v of values) {
+                if (typeof v === 'number' && !isNaN(v)) {
+                    nums.push(v);
+                } else if (typeof v === 'string') {
+                    // Try to parse string to number
+                    let numStr = v.replace(/[^0-9.,]/g, '').replace(/\./g, '').replace(',', '.');
+                    const num = parseFloat(numStr);
+                    if (!isNaN(num)) nums.push(num);
+                } else if (v && typeof v === 'object' && 'min' in v && 'max' in v) {
+                    // If it's an object from a child group, add both min and max
+                    if (typeof v.min === 'number' && !isNaN(v.min)) nums.push(v.min);
+                    if (typeof v.max === 'number' && !isNaN(v.max)) nums.push(v.max);
+                }
+            }
+            return nums;
+        }
+
+        function priceRangeAggFunc(vals) {
+            if (!vals.values) return null;
+            const nums = extractNumbersFromAggValues(vals.values);
+            if (nums.length === 0) return null;
+            const min = Math.min(...nums);
+            const max = Math.max(...nums);
+            if (min === max) return min;
+            return { min, max };
+        }
+        // Custom aggregation function for min price
+        function minPriceAggFunc(vals) {
+            if (!vals.values) return null;
+            const values = vals.values.map(el => {
+                if (typeof el === 'string') {
+                    let numStr = el.replace(/[^0-9.,]/g, '').replace(/\./g, '').replace(',', '.');
+                    return parseFloat(numStr);
+                }
+                return el;
+            });
+            const nums = values.filter(v => typeof v === 'number' && !isNaN(v));
+            if (nums.length === 0) return null;
+            return Math.min(...nums);
+        }
+        // Custom aggregation function for max price
+        function maxPriceAggFunc(vals) {
+            if (!vals.values) return null;
+            const values = vals.values.map(el => {
+                if (typeof el === 'string') {
+                    let numStr = el.replace(/[^0-9.,]/g, '').replace(/\./g, '').replace(',', '.');
+                    return parseFloat(numStr);
+                }
+                return el;
+            });
+            const nums = values.filter(v => typeof v === 'number' && !isNaN(v));
+            if (nums.length === 0) return null;
+            return Math.max(...nums);
+        }
+        // Formatter for price range or single price
+        function priceRangeFormatter(params) {
+            if (params.value == null) return '';
+            if (typeof params.value === 'object' && params.value.min !== undefined && params.value.max !== undefined) {
+                return `${params.value.min.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 })} - ${params.value.max.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 })}`;
+            }
+            return params.value.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 });
+        }
+        // Formatter for min/max price
+        function minMaxPriceFormatter(params) {
+            if (params.value == null) return '';
+            return params.value.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 });
+        }
+        // Fetch the JSON and initialize ag-Grid
+        fetch('data/bilbasen_cars_20250704_101726.json')
+            .then(res => res.json())
+            .then(data => {
+                const listings = data.listings || [];
+                const rowData = listings.map(car => {
+                    const priceStr = getPrice(car.price);
+                    const priceNum = parsePrice(priceStr);
+                    if (car.make && car.make.toLowerCase() === 'renault') {
+                        console.log('[DEBUG] Renault row:', {
+                            make: car.make,
+                            model: car.model,
+                            priceStr,
+                            priceNum,
+                            car
+                        });
+                    }
+                    return {
+                        image: getFirstImage(car.media),
+                        make: car.make,
+                        model: car.model,
+                        variant: car.variant,
+                        price: priceStr,
+                        priceNum: priceNum,
+                        city: car.location ? car.location.city : '',
+                        region: car.location ? car.location.region : '',
+                        mileage: getMileage(car.properties),
+                        mileageNum: parseMileage(getMileage(car.properties)),
+                        regdate: getRegDate(car.properties),
+                        link: car.uri
+                    };
+                });
+                const columnDefs = [
+                    {
+                        headerName: 'Image',
+                        field: 'image',
+                        cellRenderer: params => params.value ? `<img class='car-img' src='${params.value}'/>` : '',
+                        width: 100,
+                        sortable: false,
+                        filter: false
+                    },
+                    { headerName: 'Make', field: 'make', filter: 'agSetColumnFilter', enableRowGroup: true, rowGroup: true },
+                    { headerName: 'Model', field: 'model', filter: true, enableRowGroup: true, rowGroup: true, hide: true },
+                    { headerName: 'Variant', field: 'variant', filter: true, rowGroup: true, hide: true },
+                    { headerName: 'Reg. Date', field: 'regdate', filter: true, enableRowGroup: true },
+                    {
+                        headerName: 'Price',
+                        field: 'priceNum',
+                        valueGetter: params => params.data ? params.data.priceNum : null,
+                        aggFunc: priceRangeAggFunc,
+                        valueFormatter: priceRangeFormatter,
+                        filter: 'agNumberColumnFilter',
+                        enableRowGroup: true
+                    },
+                    {
+                        headerName: 'Min Price',
+                        field: 'minPrice',
+                        valueGetter: params => params.data ? params.data.priceNum : null,
+                        aggFunc: minPriceAggFunc,
+                        valueFormatter: minMaxPriceFormatter,
+                        filter: 'agNumberColumnFilter',
+                        sortable: true,
+                        enableRowGroup: false
+                    },
+                    {
+                        headerName: 'Max Price',
+                        field: 'maxPrice',
+                        valueGetter: params => params.data ? params.data.priceNum : null,
+                        aggFunc: maxPriceAggFunc,
+                        valueFormatter: minMaxPriceFormatter,
+                        filter: 'agNumberColumnFilter',
+                        sortable: true,
+                        enableRowGroup: false
+                    },
+                    {
+                        headerName: 'Mileage',
+                        field: 'mileageNum',
+                        valueGetter: params => params.data ? params.data.mileageNum : null,
+                        valueFormatter: params => params.value ? params.value.toLocaleString('da-DK') + ' km' : '',
+                        filter: 'agNumberColumnFilter',
+                        enableValue: true,
+                        enableRowGroup: true
+                    },
+                    // { headerName: 'City', field: 'city', filter: true },
+                    // { headerName: 'Region', field: 'region', filter: true },
+                    {
+                        headerName: 'Link',
+                        field: 'link',
+                        cellRenderer: params => params.value ? `<a href='${params.value}' target='_blank'>View</a>` : ''
+                    }
+                ];
+                const gridOptions = {
+                    suppressRowGroupColumns: true,
+                    columnDefs,
+                    rowData,
+                    defaultColDef: {
+                        flex: 1,
+                        minWidth: 100,
+                        resizable: true,
+                        sortable: true,
+                        filter: true,
+                        enableRowGroup: true,
+                        enableValue: true
+                    },
+                    groupDisplayType: 'multipleColumns',
+                    rowGroupPanelShow: 'always',
+                    animateRows: true,
+                    pagination: true,
+                    paginationPageSize: 30,
+                    // autoGroupColumnDef: {
+                    //     headerName: 'Group',
+                    //     minWidth: 200,
+                    //     cellRendererParams: {
+                    //         footerValueGetter: params => {
+                    //             const isRoot = params.node.level === -1;
+                    //             return isRoot ? 'Grand Total' : `${params.value} Total`;
+                    //         }
+                    //     }
+                    // },
+                    suppressAggFuncInHeader: true
+                };
+                agGrid.createGrid(document.getElementById('myGrid'), gridOptions);
+            });
+    </script>
+</body>
+
+</html>

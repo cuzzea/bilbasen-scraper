@@ -1,0 +1,211 @@
+curl 'https://www.bilbasen.dk/api/search/by-request' \
+-X 'POST' \
+-H 'Content-Type: application/json' \
+-H 'Accept: */*' \
+-H 'Sec-Fetch-Site: same-origin' \
+-H 'Accept-Language: en-US,en;q=0.9' \
+-H 'Accept-Encoding: gzip, deflate, br' \
+-H 'Sec-Fetch-Mode: cors' \
+-H 'Host: www.bilbasen.dk' \
+-H 'Origin: https://www.bilbasen.dk' \
+-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15' \
+-H 'Referer: https://www.bilbasen.dk/brugt/bil?includeengroscvr=true&includeleasing=false&pricefrom=250000&priceto=300000&regfrom=2024-01' \
+-H 'Content-Length: 268' \
+-H 'Connection: keep-alive' \
+-H 'Sec-Fetch-Dest: empty' \
+-H 'Cookie: tis=EP114%3A4316; GdprConsent={"version":"IAB TCF 2.0","consentString":"CQT33IAQT33IAAGABCENBvFgAP_gAEPgAAZQJtNR7C_1LWlBoT53SZMgUYxX4dhirkQxBAZJk8QFwLOCMBQXkiEwNAzANiICGBAAOFBBIQFkGICQBQCgKggRrDDEaESUgCJCJ4AEgAMQQwNICFBJGgFCOQAYxvg4chBQmB6twMrsBMxwi4BGmWY5BoCwWBAVAYcpDPv0ZBKSkxAM9bw0OgnwZF6BE0AAAAAAAAAAAAAAAAAAAAAAAQQFgIAAKABAACoAGQANAAmAB8AIiATQBWQC5gGQgNXAb8A5YCAoCYSAwAAsACoAHAAPAAvAD8AIQARwArQBgQDKAMsAdwA_YCRAJKAVEAxQB7QFHgLsAXmA3MB8YD_gIWhQAQACgIChABoADwAjgE0AJ2AdUA_oCxAFuAL_AZCA1MBwgD9xQAEA6owACAdUdAcAAWABUADgALwAxAB-AFaAMAAZQA0QB-gEWgI6AkoBUQDFAHtAPsAmQBR4C3QF2ALzAZYA-MB9wD-wH_AQtHgAwAFAERAgKOALgAPAAuAEcAKAAfABHADkAHcAQgAnYB1QD-gIQAWIAtkBbgC_wGQgNTAbmA4QBywD9yEAsABYAYgA_ADAAHcAVEAxQC7AHxgP7AhaRAAgQFIABgAHgDkAOqAsQBqYDliUA4ABYAHAAxACOAFaAMAAqIBigD2gIQAUeAuwBeYD4yYAECApIASABcAI4A7gDqgLcAX-AywBywD9ykBoABYAFQAOABiAD8AK0AYAAygBogD9AIsAR0AkoBUQDFAHtAPsAuwBeYDLAHigPjAf2A_4CFoEOSoAIABQEBSgA8AC4ARwAoACOAHIAO4AkQBdQDqgIQAVIAtwBqYDcwH7loAgAwAB3AH2AXYWABgDLAamA5YA.YAAAAAAAAAAA"}; GdprConsent-Custom=eyJ2ZW5kb3JJZHMiOnsiNjIyNjE5YjNkMTIzZTkwNmE5MWJhMDY4Ijp0cnVlLCI1ZTcxNmZjMDlhMGI1MDQwZDU3NTA4MGYiOnRydWV9fQ==; _cmp_advertising=1; _cmp_analytics=1; _cmp_marketing=1; _cmp_personalisation=1; _gcl_au=1.1.566101290.1749726327; _hjSessionUser_2664500=eyJpZCI6IjVkYzRhYzMzLTA4OGItNTAyNC1iZTg0LTY5ZjZhZTFlYmYxYSIsImNyZWF0ZWQiOjE3NDk3MjYzMjczNzEsImV4aXN0aW5nIjp0cnVlfQ==; _pulsesession=%5B%22sdrn%3Aschibsted%3Asession%3A62e3fe37-5d79-4818-abc7-e5473255b690%22%2C1751528108970%2C1751528131584%5D; cto_bundle=Ng4F-F9mRkxQak96Mk1FTFhST0NyODJsS2tHdkdaZ1dvQjE0c0lRMHFnT0QyYXJQRUlFQ2V3b2kyVDRXaDIxZVhaZlFSWkVyQm90eGwlMkZ6b0NHY0pQVDZBMlkyWW8xc2piU284bW9HTzFCSmpSZUVXbnZQalZsYk03aVhOQ3g4aUpaVDdD; __rtbh.lid=%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22NSU0o31J8gM5r4fuO8Or%22%2C%22expiryDate%22%3A%222026-07-03T07%3A35%3A31.313Z%22%7D; __rtbh.uid=%7B%22eventType%22%3A%22uid%22%2C%22id%22%3A%22undefined%22%2C%22expiryDate%22%3A%222026-07-03T07%3A35%3A31.316Z%22%7D; axd=4398503308610903797; __eoi=ID=f93cd21d95142f97:T=1749726328:RT=1751528110:S=AA-AfjY2YUrruPWGZ3gfKPbTbGxD; __gads=ID=27250df0d39f3ece:T=1749726328:RT=1751528110:S=ALNI_MZM2X-xmi1SymFns7YJPVsqt_09Hw; __gpi=UID=0000111e2f9472b0:T=1749726328:RT=1751528110:S=ALNI_MY6jmiI_lpmXBC6hBpTL4NHeBQXew; _hjSession_2664500=eyJpZCI6IjFhOWQxMjhhLTRhZTUtNDYwYS05YzNiLTQ5MjdlMWJkODI1NiIsImMiOjE3NTE1MjgxMTAyNjYsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MX0=; bbsession=id=4c365398-66d2-45cd-9d1b-76a78c4217d6; bbtracker=id=b1616650-bcb7-438a-8f95-c04beb256339; consentDate=2025-07-01T10:48:00.820Z; consentUUID=e4d6dd0a-7cf1-4f6d-9e1f-dbf65cb5d45f_44_45; _pulse2data=5d4cb439-2305-49a0-bfaf-02ccf47fda78%2Cv%2C%2C1751971679000%2CeyJpc3N1ZWRBdCI6IjIwMjUtMDYtMTFUMTI6MzQ6NDlaIiwiZW5jIjoiQTEyOENCQy1IUzI1NiIsInJlSXNzdWVkQXQiOiIyMDI1LTA3LTAxVDEwOjQ3OjU5WiIsImFsZyI6ImRpciIsImtpZCI6IjMifQ..Tn1AMhhhqF9qKuOyYFL2iQ.v396rmrlSEr06n0s1dE4tWGRCd_tCHfI2JIps-hjiMRwv1AHJoXvI-7-fieUIpkAuziNAP5BpS_xSUeA0Pynw3QK9SISxXQTFXeNdV24fwCat6nnq1WbwsAYNWKKEf-c273swo_Rsn7azz5o6KSmThOdwh6XCOSmqtkRHpnBvmLudVVBeOTA3_lHhXcf1c3guppWwWf0vCVOKyejW_jA0g.tyUiuygOinvrMNEyz7IPpA%2C%2C0%2Ctrue%2C%2C; cis-jwe=eyJpc3N1ZWRBdCI6IjIwMjUtMDYtMTFUMTI6MzQ6NDlaIiwiZW5jIjoiQTEyOENCQy1IUzI1NiIsInJlSXNzdWVkQXQiOiIyMDI1LTA3LTAxVDEwOjQ3OjU5WiIsImFsZyI6ImRpciIsImtpZCI6IjMifQ..__kwFGvKASDCYG7AAotBBQ.5VZCVHACAuyVEFBIL5s99I6vvBlKFgQ2kq4B1kkaTxSszh7b_eocDIFAdy8nJsEGYa8pxx8MWag8KND5iBuYLg.wLUXyoXc8st27L39uhqA_w' \
+--data-binary '{"pageSize":30,"selectedFilters":{"Ownership":{"value":{"value":"Retail"}},"Category":{"value":{"value":"Car"}},"PriceRange":{"value":{"fromValue":250000,"toValue":300000}},"FirstRegistration":{"value":{"fromValue":2024}},"FuelType":{"values":[{"value":"Electric"}]}}}'
+
+Response:
+
+{
+    "listings": [
+        {
+            "externalId": 6527228,
+            "uri": "https://www.bilbasen.dk/brugt/bil/hyundai/ioniq-5/77-essential-5d/6527228",
+            "media": [
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/995b24a6-fdd3-4488-92d1-5ca25b3d7313.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/9935fcf0-a626-49b7-a7cd-890b5255a041.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/6b0f9e70-0683-4822-a612-5ea91a0a7771.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/82ddee07-fc41-4f7f-9ada-bf2b363e170d.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/dad2eb76-7d58-4144-b82f-23cf9d0f7bb9.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/6ccfad54-db75-4fbe-9535-9a06f9efc6f0.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/23d28d90-d10c-4957-8cd0-0f5dff3587eb.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/7108e7e6-fb79-4cf6-a5e9-be76de4d7284.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/fca78a84-0d42-4433-a843-7f41a5d30b2e.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/1735bc8a-e7d2-4fed-b925-d9dd1bb95dfc.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/34d834c8-119d-4c88-a726-67737e1648d5.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/e1878a3d-ab40-4524-9655-ade33a548004.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/3bbecf97-987f-4c8f-9341-d3943c79e20f.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/d9629f34-bc0d-49ec-8990-df462e74f3fc.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/eeeb7f9f-4621-42a0-ab7b-0d621260ea7a.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/fe6de2ed-31fe-401c-be5d-dd588c6b418d.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/0920c6ae-cf1b-47bc-aa5c-592420e8efc4.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/8f8afd85-7975-4806-8c7a-964b04ac886d.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/f5086878-6df9-4df0-acc3-825d0a421bcb.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/5b43c2e9-f18d-4952-a278-b53b2a37f0bf.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/0464063d-6e6c-43a5-89e7-be80b933ce7c.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/521b1dc2-804a-4507-a75d-75870e94dbc5.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "Picture",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/7e21acaf-f105-496c-bde1-3c6b8e2af6f2.jpeg?class=S640X640"
+                },
+                {
+                    "mediaType": "DealerLogo",
+                    "url": "https://billeder.bilbasen.dk/bilinfo/306cdf6a-a88d-4857-9b9b-670603cbfc49.jpeg?class=S400X400"
+                }
+            ],
+            "price": {
+                "price": 273900,
+                "displayPrice": "273.900 kr",
+                "unit": "kr",
+                "priceType": "Retail"
+            },
+            "make": "Hyundai",
+            "model": "Ioniq 5",
+            "variant": "77 Essential 5d",
+            "doors": 5,
+            "description": "Hyundai Ioniq 5 Electric 77,4 kWh\n\nEr du på udkig efter en næsten ny elbil? Så er denne Hyundai Ioniq 5 noget for dig. Med få km. på tælleren får du en frisk og moderne SUV med masser af stil og komfort. \n\nDenne Ioniq 5 er indregistreret i 2025 og byder på en avanceret kørselsoplevelse med en Aut. gearkasse, der sikrer problemfri og behagelig kørsel. Hvis du værdsætter teknologi, vil du elske den digitale instrumentering, der holder dig informeret og underholdt på farten. Den adaptive fartpilot hjælper med at holde afstanden til forankørende, mens du kan nyde musikstreaming via Bluetooth gennem et sofistikeret lydsystem.\n\nMed en 3-Faset opladning er det lettere end nogensinde at holde bilen kørende. Du får også glæde af en række sikkerhedsfunktioner og praktiske detaljer, der gør hver køretur til en fornøjelse.\n\nKontakt os hos Lysen Biler på info@lysenbiler.dk for mere information. Bilen står klar til dig i Sorø.\n\nVigtigt udstyr:\n- 3-Faset opladning\n- Adaptiv fartpilot\n- Digital instrumentering\n- Touchskærm\n- Bakkamera\n- Parkeringssensor bag\n- Apple CarPlay & Android Auto\n- El-foldbare spejle\n- 2-zoners klimaanlæg\n- LED forlygter og baglygter\n- Mørktonede ruder bag\n- Keyless go\n- Auto hold\n\nOplev en kombination af stil og funktionalitet med denne skønne Hyundai Ioniq 5. Gør dit liv lettere med nyskabende teknologi og kør med selvtillid og komfort.\n\n\nBilen er importeret og kan derfor variere i udstyr i forhold til den danske udstyrsliste.\n\nVi ses hos Lysen Biler!\n\n✔️Alle vores biler kan finansieres til fordelagtige rentesatser og både med 0 kr. i udbetaling eller fast rente. \n🚘Vi tager naturligvis gerne din nuværende bil i bytte.\n📞Ring, send en mail eller chat med os på www.lysenbiler.dk",
+            "location": {
+                "lat": 55.44241,
+                "lon": 11.568512,
+                "zipCode": 4180,
+                "city": "Sorø",
+                "region": "Syd- og Vestsjælland"
+            },
+            "details": [
+                {
+                    "displayText": "2/2025"
+                },
+                {
+                    "displayText": "20 km"
+                },
+                {
+                    "displayText": "507 km rækkevidde"
+                },
+                {
+                    "displayText": "El"
+                }
+            ],
+            "features": [],
+            "isFavorite": false,
+            "sellerType": "Forhandler",
+            "properties": {
+                "firstregistrationdate": {
+                    "displayTextLong": "2/2025",
+                    "displayTextShort": "2/2025"
+                },
+                "mileage": {
+                    "displayTextLong": "20 km",
+                    "displayTextShort": "20 km"
+                },
+                "hk": {
+                    "displayTextLong": "229 hk",
+                    "displayTextShort": "229 hk"
+                },
+                "moth": {
+                    "displayTextLong": "Ejerafgift 840 kr/år",
+                    "displayTextShort": "840 kr/år"
+                },
+                "trailer": {
+                    "displayTextLong": "1.600 kg trækvægt",
+                    "displayTextShort": "1.600 kg"
+                },
+                "kmt": {
+                    "displayTextLong": "Accel. 7,4 sek",
+                    "displayTextShort": "7,4 sek"
+                },
+                "electricmotorrange": {
+                    "displayTextLong": "Rækkevidde 507 km",
+                    "displayTextShort": "507 km"
+                },
+                "batterycapacity": {
+                    "displayTextLong": "77 kWh batteri",
+                    "displayTextShort": "77 kWh"
+                },
+                "geartype": {
+                    "displayTextLong": "Automatisk gear",
+                    "displayTextShort": "Automatisk gear"
+                },
+                "fueltype": {
+                    "displayTextLong": "El",
+                    "displayTextShort": "El"
+                }
+            }
+        },
+        ...
+    ],
+    "pulse": {
+            "@type": "View",
+            "object": {
+                "numItems": 678,
+                "pageNumber": 1,
+            }
+    }
+}
