@@ -246,7 +246,7 @@ def main():
 
     if listings:
         # Save the data
-        filepath = scraper.save_data(listings, "latest.json")
+        filepath = scraper.save_data(listings, "latest_cars.json")
 
         # Print summary
         summary = scraper.extract_car_summary(listings)
