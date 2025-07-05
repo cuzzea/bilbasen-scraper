@@ -1047,6 +1047,210 @@
 
 
             });
+
+        // Import/Export Console Scripts
+        // Run these functions in the browser console to import/export grid data
+
+        // Export all saved data
+        function exportAllGridData() {
+            const exportData = {
+                timestamp: new Date().toISOString(),
+                version: '1.0',
+                data: {
+                    filteredCars: JSON.parse(localStorage.getItem('filteredCars') || '[]'),
+                    filterState: JSON.parse(localStorage.getItem('filterState') || '{}'),
+                    rowGroupState: JSON.parse(localStorage.getItem('rowGroupState') || '[]'),
+                    bilbasenGridState: JSON.parse(localStorage.getItem('bilbasenGridState') || '{}')
+                }
+            };
+
+            const dataStr = JSON.stringify(exportData, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `bilbasen-grid-data-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            console.log('✅ Grid data exported successfully!');
+            console.log('📊 Export summary:', {
+                filteredCars: exportData.data.filteredCars.length,
+                hasFilterState: Object.keys(exportData.data.filterState).length > 0,
+                hasRowGroupState: exportData.data.rowGroupState.length > 0,
+                hasGridState: Object.keys(exportData.data.bilbasenGridState).length > 0
+            });
+
+            return exportData;
+        }
+
+        // Import all saved data
+        function importAllGridData(jsonData) {
+            try {
+                let data;
+
+                // Handle both string and object input
+                if (typeof jsonData === 'string') {
+                    data = JSON.parse(jsonData);
+                } else {
+                    data = jsonData;
+                }
+
+                // Validate the data structure
+                if (!data.data || typeof data.data !== 'object') {
+                    throw new Error('Invalid data structure. Expected "data" object.');
+                }
+
+                const { filteredCars, filterState, rowGroupState, bilbasenGridState } = data.data;
+
+                // Import each piece of data
+                if (filteredCars && Array.isArray(filteredCars)) {
+                    localStorage.setItem('filteredCars', JSON.stringify(filteredCars));
+                    console.log(`✅ Imported ${filteredCars.length} filtered cars`);
+                }
+
+                if (filterState && typeof filterState === 'object') {
+                    localStorage.setItem('filterState', JSON.stringify(filterState));
+                    console.log('✅ Imported filter state');
+                }
+
+                if (rowGroupState && Array.isArray(rowGroupState)) {
+                    localStorage.setItem('rowGroupState', JSON.stringify(rowGroupState));
+                    console.log('✅ Imported row group state');
+                }
+
+                if (bilbasenGridState && typeof bilbasenGridState === 'object') {
+                    localStorage.setItem('bilbasenGridState', JSON.stringify(bilbasenGridState));
+                    console.log('✅ Imported grid state');
+                }
+
+                console.log('🎉 All data imported successfully!');
+                console.log('🔄 Please refresh the page to apply the imported data.');
+
+                return true;
+            } catch (error) {
+                console.error('❌ Error importing data:', error.message);
+                return false;
+            }
+        }
+
+        // Import from file (helper function)
+        function importFromFile() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = function (event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const success = importAllGridData(e.target.result);
+                        if (success) {
+                            alert('Data imported successfully! Please refresh the page to apply the changes.');
+                        } else {
+                            alert('Failed to import data. Check console for details.');
+                        }
+                    };
+                    reader.readAsText(file);
+                }
+            };
+            input.click();
+        }
+
+        // Clear all saved data
+        function clearAllGridData() {
+            const keys = ['filteredCars', 'filterState', 'rowGroupState', 'bilbasenGridState'];
+            keys.forEach(key => localStorage.removeItem(key));
+            console.log('🗑️ All grid data cleared from localStorage');
+            console.log('🔄 Please refresh the page to see the changes.');
+        }
+
+        // View current saved data (without exporting)
+        function viewCurrentGridData() {
+            const currentData = {
+                filteredCars: JSON.parse(localStorage.getItem('filteredCars') || '[]'),
+                filterState: JSON.parse(localStorage.getItem('filterState') || '{}'),
+                rowGroupState: JSON.parse(localStorage.getItem('rowGroupState') || '[]'),
+                bilbasenGridState: JSON.parse(localStorage.getItem('bilbasenGridState') || '{}')
+            };
+
+            console.log('📊 Current Grid Data:', currentData);
+            console.log('📈 Summary:', {
+                filteredCarsCount: currentData.filteredCars.length,
+                filterStateKeys: Object.keys(currentData.filterState).length,
+                rowGroupStateCount: currentData.rowGroupState.length,
+                hasGridState: Object.keys(currentData.bilbasenGridState).length > 0
+            });
+
+            return currentData;
+        }
+
+        // Export only filtered cars data
+        function exportFilteredCars() {
+            const filteredCars = JSON.parse(localStorage.getItem('filteredCars') || '[]');
+            const dataStr = JSON.stringify(filteredCars, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `bilbasen-filtered-cars-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            console.log(`✅ Exported ${filteredCars.length} filtered cars`);
+            return filteredCars;
+        }
+
+        // Export only grid state (filters, sorting, grouping)
+        function exportGridState() {
+            const gridState = {
+                filterState: JSON.parse(localStorage.getItem('filterState') || '{}'),
+                rowGroupState: JSON.parse(localStorage.getItem('rowGroupState') || '[]'),
+                bilbasenGridState: JSON.parse(localStorage.getItem('bilbasenGridState') || '{}')
+            };
+
+            const dataStr = JSON.stringify(gridState, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `bilbasen-grid-state-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            console.log('✅ Grid state exported successfully!');
+            return gridState;
+        }
+
+        // Make functions available globally
+        window.bilbasenGridExport = {
+            exportAll: exportAllGridData,
+            importAll: importAllGridData,
+            importFromFile: importFromFile,
+            clearAll: clearAllGridData,
+            viewCurrent: viewCurrentGridData,
+            exportCars: exportFilteredCars,
+            exportState: exportGridState
+        };
+
+        // Log available functions
+        console.log('🚀 Bilbasen Grid Import/Export functions available:');
+        console.log('📤 Export all data: bilbasenGridExport.exportAll()');
+        console.log('📥 Import all data: bilbasenGridExport.importAll(jsonData)');
+        console.log('📁 Import from file: bilbasenGridExport.importFromFile()');
+        console.log('🗑️ Clear all data: bilbasenGridExport.clearAll()');
+        console.log('👁️ View current data: bilbasenGridExport.viewCurrent()');
+        console.log('🚗 Export cars only: bilbasenGridExport.exportCars()');
+        console.log('⚙️ Export state only: bilbasenGridExport.exportState()');
     </script>
 </body>
 
