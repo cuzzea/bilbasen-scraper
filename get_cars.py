@@ -93,24 +93,8 @@ class BilbasenScraper:
 
     def save_partial_data(self, listings, filename="bilbasen_cars_partial.json"):
         """Save the current scraped data to a partial JSON file after each batch/page"""
-        data_dir = Path("data")
-        data_dir.mkdir(exist_ok=True)
-        filepath = data_dir / filename
-        output_data = {
-            "scraped_at": datetime.now().isoformat(),
-            "total_listings": len(listings),
-            "filters": {
-                "price_range": "250,000 - 300,000 kr",
-                "fuel_type": "Electric",
-                "first_registration": "2024+",
-                "ownership": "Retail",
-                "category": "Car"
-            },
-            "listings": listings
-        }
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(output_data, f, indent=2, ensure_ascii=False)
-        print(f"[Partial Save] Data saved to: {filepath}")
+        # This method is now disabled to avoid creating partial files
+        pass
 
     def scrape_all_pages(self, max_pages=None, delay=1):
         """Scrape all pages of results, saving after each batch and printing progress info"""
@@ -155,8 +139,8 @@ class BilbasenScraper:
             price_to = max_price if max_price != 0 else 'N/A'
             print(f"Current price range: {price_from:,} - {price_to:,} kr")
             print(f"Unique brands so far: {sorted(unique_brands)}")
-            # Save after each batch/page
-            self.save_partial_data(all_listings)
+            # Save after each batch/page (disabled to avoid partial files)
+            # self.save_partial_data(all_listings)
             # Check if we've reached the maximum pages
             if max_pages and page >= max_pages:
                 print(f"Reached maximum pages limit ({max_pages})")

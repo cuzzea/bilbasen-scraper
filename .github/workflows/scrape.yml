@@ -36,7 +36,7 @@ jobs:
       - name: Move JSON to docs/
         run: |
           mkdir -p docs
-          cp data/bilbasen_cars_*.json docs/
+          cp data/latest_cars.json docs/
 
       - name: Commit and push JSON
         run: |

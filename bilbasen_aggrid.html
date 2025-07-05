@@ -37,11 +37,30 @@
         .ag-header-cell-label {
             font-weight: bold;
         }
+
+        kbd {
+            background-color: #eee;
+            border-radius: 3px;
+            border: 1px solid #b4b4b4;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+            color: #333;
+            display: inline-block;
+            font-size: 0.85em;
+            font-weight: 700;
+            line-height: 1;
+            padding: 2px 4px;
+            white-space: nowrap;
+        }
     </style>
 </head>
 
 <body>
     <h2 style="text-align:center; margin-top: 1.5rem;">Bilbasen Car Listings (ag-Grid)</h2>
+    <div
+        style="text-align: center; margin: 1rem 0; padding: 0.5rem; background: #f8f9fa; border-radius: 5px; font-size: 0.9rem;">
+        <strong>Multi-Column Sorting:</strong> Hold <kbd>Ctrl</kbd> (or <kbd>Cmd</kbd> on Mac) and click column headers
+        to sort by multiple columns simultaneously.
+    </div>
     <div id="myGrid" class="ag-theme-alpine"></div>
 
     <!-- ag-Grid Community -->
@@ -60,6 +79,40 @@
         function getRegDate(props) {
             return props && props.firstregistrationdate ? props.firstregistrationdate.displayTextShort : '';
         }
+        // Helper to extract year from registration date
+        function getRegYear(props) {
+            if (!props || !props.firstregistrationdate) return null;
+            const dateStr = props.firstregistrationdate.displayTextShort;
+            // Extract year from date string (assuming format like "01.01.2020")
+            const yearMatch = dateStr.match(/(\d{4})/);
+            return yearMatch ? parseInt(yearMatch[1]) : null;
+        }
+        // Helper to get horsepower
+        function getHorsepower(props) {
+            return props && props.hk ? props.hk.displayTextShort : '';
+        }
+        // Helper to get electric range
+        function getElectricRange(props) {
+            return props && props.electricmotorrange ? props.electricmotorrange.displayTextShort : '';
+        }
+        // Helper to get fuel type
+        function getFuelType(props) {
+            return props && props.fueltype ? props.fueltype.displayTextShort : '';
+        }
+        // Helper to parse horsepower string to number for aggregation
+        function parseHorsepower(str) {
+            if (!str) return null;
+            // Extract number from string like "286 hk"
+            const numMatch = str.match(/(\d+)/);
+            return numMatch ? parseInt(numMatch[1]) : null;
+        }
+        // Helper to parse electric range string to number for aggregation
+        function parseElectricRange(str) {
+            if (!str) return null;
+            // Extract number from string like "453 km"
+            const numMatch = str.match(/(\d+)/);
+            return numMatch ? parseInt(numMatch[1]) : null;
+        }
         // Helper to get price display
         function getPrice(price) {
             return price && price.displayPrice ? price.displayPrice : '';
@@ -69,7 +122,8 @@
             if (!str) return null;
             // Remove dots and non-numeric except comma, then replace comma with dot
             let num = str.replace(/[^0-9,]/g, '').replace(/\./g, '').replace(',', '.');
-            return parseFloat(num);
+            const result = parseFloat(num);
+            return result;
         }
         // Helper to parse mileage string to number for aggregation
         function parseMileage(str) {
@@ -94,24 +148,37 @@
                     // Try to parse string to number
                     let numStr = v.replace(/[^0-9.,]/g, '').replace(/\./g, '').replace(',', '.');
                     const num = parseFloat(numStr);
-                    if (!isNaN(num)) nums.push(num);
+                    if (!isNaN(num)) {
+                        nums.push(num);
+                    }
                 } else if (v && typeof v === 'object' && 'min' in v && 'max' in v) {
                     // If it's an object from a child group, add both min and max
-                    if (typeof v.min === 'number' && !isNaN(v.min)) nums.push(v.min);
-                    if (typeof v.max === 'number' && !isNaN(v.max)) nums.push(v.max);
+                    if (typeof v.min === 'number' && !isNaN(v.min)) {
+                        nums.push(v.min);
+                    }
+                    if (typeof v.max === 'number' && !isNaN(v.max)) {
+                        nums.push(v.max);
+                    }
                 }
             }
             return nums;
         }
 
         function priceRangeAggFunc(vals) {
-            if (!vals.values) return null;
+            if (!vals.values) {
+                return null;
+            }
             const nums = extractNumbersFromAggValues(vals.values);
-            if (nums.length === 0) return null;
+            if (nums.length === 0) {
+                return null;
+            }
             const min = Math.min(...nums);
             const max = Math.max(...nums);
-            if (min === max) return min;
-            return { min, max };
+            if (min === max) {
+                return min;
+            }
+            // Return an object with min, max, and a sortValue for proper sorting
+            return { min, max, sortValue: min };
         }
         // Custom aggregation function for min price
         function minPriceAggFunc(vals) {
@@ -141,12 +208,100 @@
             if (nums.length === 0) return null;
             return Math.max(...nums);
         }
+        // Custom aggregation function for min year
+        function minYearAggFunc(vals) {
+            if (!vals.values) return null;
+            const nums = vals.values.filter(v => typeof v === 'number' && !isNaN(v));
+            if (nums.length === 0) return null;
+            return Math.min(...nums);
+        }
+        // Custom aggregation function for max year
+        function maxYearAggFunc(vals) {
+            if (!vals.values) return null;
+            const nums = vals.values.filter(v => typeof v === 'number' && !isNaN(v));
+            if (nums.length === 0) return null;
+            return Math.max(...nums);
+        }
+        // Custom aggregation function for year range
+        function yearRangeAggFunc(vals) {
+            if (!vals.values) return null;
+            const nums = extractNumbersFromAggValues(vals.values);
+            if (nums.length === 0) return null;
+            const min = Math.min(...nums);
+            const max = Math.max(...nums);
+
+            if (min === max) return min;
+            return { min, max, sortValue: min };
+        }
+        // Custom aggregation function for mileage range
+        function mileageRangeAggFunc(vals) {
+            if (!vals.values) return null;
+            const nums = extractNumbersFromAggValues(vals.values);
+            if (nums.length === 0) return null;
+            const min = Math.min(...nums);
+            const max = Math.max(...nums);
+            if (min === max) return min;
+            return { min, max, sortValue: min };
+        }
+        // Custom aggregation function for horsepower range
+        function horsepowerRangeAggFunc(vals) {
+            if (!vals.values) return null;
+            const nums = extractNumbersFromAggValues(vals.values);
+            if (nums.length === 0) return null;
+            const min = Math.min(...nums);
+            const max = Math.max(...nums);
+            if (min === max) return min;
+            return { min, max, sortValue: min };
+        }
+        // Custom aggregation function for electric range
+        function electricRangeAggFunc(vals) {
+            if (!vals.values) return null;
+            const nums = extractNumbersFromAggValues(vals.values);
+            if (nums.length === 0) return null;
+            const min = Math.min(...nums);
+            const max = Math.max(...nums);
+            if (min === max) return min;
+            return { min, max, sortValue: min };
+        }
+        // Custom aggregation function for fuel types (show unique values)
+        function fuelTypeAggFunc(vals) {
+            if (!vals.values) return null;
+            const uniqueTypes = [...new Set(vals.values.filter(v => v && v.trim()))];
+            if (uniqueTypes.length === 0) return null;
+            if (uniqueTypes.length === 1) return uniqueTypes[0];
+            return uniqueTypes.join(', ');
+        }
         // Formatter for price range or single price
         function priceRangeFormatter(params) {
-            if (params.value == null) return '';
+            // If value is null/undefined but we have a group node with children, calculate from children
+            if (params.value == null && params.node && params.node.group && params.node.childrenAfterFilter) {
+                const allLeafNodes = getAllLeafNodes(params.node.childrenAfterFilter);
+                const prices = allLeafNodes
+                    .map(child => child.data ? child.data.priceNum : null)
+                    .filter(price => price != null && !isNaN(price));
+
+                if (prices.length === 0) {
+                    return '';
+                }
+
+                const min = Math.min(...prices);
+                const max = Math.max(...prices);
+
+                if (min === max) {
+                    return min.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 });
+                } else {
+                    return `${min.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 })} - ${max.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 })}`;
+                }
+            }
+
+            if (params.value == null) {
+                return '';
+            }
+
             if (typeof params.value === 'object' && params.value.min !== undefined && params.value.max !== undefined) {
                 return `${params.value.min.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 })} - ${params.value.max.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 })}`;
             }
+
             return params.value.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 });
         }
         // Formatter for min/max price
@@ -154,23 +309,362 @@
             if (params.value == null) return '';
             return params.value.toLocaleString('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 });
         }
+        // Formatter for year range or single year
+        function yearRangeFormatter(params) {
+            // If value is null/undefined but we have a group node with children, calculate from children
+            if (params.value == null && params.node && params.node.group && params.node.childrenAfterFilter) {
+                const allLeafNodes = getAllLeafNodes(params.node.childrenAfterFilter);
+                const years = allLeafNodes
+                    .map(child => child.data ? child.data.regYear : null)
+                    .filter(year => year != null && !isNaN(year));
+
+                if (years.length === 0) return '';
+
+                const min = Math.min(...years);
+                const max = Math.max(...years);
+
+                if (min === max) {
+                    return min.toString();
+                } else {
+                    return `${min} - ${max}`;
+                }
+            }
+
+            if (params.value == null) return '';
+            if (typeof params.value === 'object' && params.value.min !== undefined && params.value.max !== undefined) {
+                return `${params.value.min} - ${params.value.max}`;
+            }
+            return params.value.toString();
+        }
+        // Formatter for mileage range or single mileage
+        function mileageRangeFormatter(params) {
+            // If value is null/undefined but we have a group node with children, calculate from children
+            if (params.value == null && params.node && params.node.group && params.node.childrenAfterFilter) {
+                const allLeafNodes = getAllLeafNodes(params.node.childrenAfterFilter);
+                const mileages = allLeafNodes
+                    .map(child => child.data ? child.data.mileageNum : null)
+                    .filter(mileage => mileage != null && !isNaN(mileage));
+
+                if (mileages.length === 0) return '';
+
+                const min = Math.min(...mileages);
+                const max = Math.max(...mileages);
+
+                if (min === max) {
+                    return min.toLocaleString('da-DK') + ' km';
+                } else {
+                    return `${min.toLocaleString('da-DK')} - ${max.toLocaleString('da-DK')} km`;
+                }
+            }
+
+            if (params.value == null) return '';
+            if (typeof params.value === 'object' && params.value.min !== undefined && params.value.max !== undefined) {
+                return `${params.value.min.toLocaleString('da-DK')} - ${params.value.max.toLocaleString('da-DK')} km`;
+            }
+            return params.value.toLocaleString('da-DK') + ' km';
+        }
+        // Formatter for horsepower range or single horsepower
+        function horsepowerRangeFormatter(params) {
+            // If value is null/undefined but we have a group node with children, calculate from children
+            if (params.value == null && params.node && params.node.group && params.node.childrenAfterFilter) {
+                const allLeafNodes = getAllLeafNodes(params.node.childrenAfterFilter);
+                const horsepowers = allLeafNodes
+                    .map(child => child.data ? child.data.horsepowerNum : null)
+                    .filter(hp => hp != null && !isNaN(hp));
+
+                if (horsepowers.length === 0) return '';
+
+                const min = Math.min(...horsepowers);
+                const max = Math.max(...horsepowers);
+
+                if (min === max) {
+                    return min + ' hk';
+                } else {
+                    return `${min} - ${max} hk`;
+                }
+            }
+
+            if (params.value == null) return '';
+            if (typeof params.value === 'object' && params.value.min !== undefined && params.value.max !== undefined) {
+                return `${params.value.min} - ${params.value.max} hk`;
+            }
+            return params.value + ' hk';
+        }
+        // Formatter for electric range range or single range
+        function electricRangeFormatter(params) {
+            // If value is null/undefined but we have a group node with children, calculate from children
+            if (params.value == null && params.node && params.node.group && params.node.childrenAfterFilter) {
+                const allLeafNodes = getAllLeafNodes(params.node.childrenAfterFilter);
+                const ranges = allLeafNodes
+                    .map(child => child.data ? child.data.electricRangeNum : null)
+                    .filter(range => range != null && !isNaN(range));
+
+                if (ranges.length === 0) return '';
+
+                const min = Math.min(...ranges);
+                const max = Math.max(...ranges);
+
+                if (min === max) {
+                    return min + ' km';
+                } else {
+                    return `${min} - ${max} km`;
+                }
+            }
+
+            if (params.value == null) return '';
+            if (typeof params.value === 'object' && params.value.min !== undefined && params.value.max !== undefined) {
+                return `${params.value.min} - ${params.value.max} km`;
+            }
+            return params.value + ' km';
+        }
+
+        // Helper function to recursively get all leaf nodes from a group hierarchy
+        function getAllLeafNodes(nodes) {
+            const leafNodes = [];
+
+            for (const node of nodes) {
+                if (node.group) {
+                    // If it's a group, recursively get its children
+                    if (node.childrenAfterFilter) {
+                        leafNodes.push(...getAllLeafNodes(node.childrenAfterFilter));
+                    }
+                } else {
+                    // If it's a leaf node, add it directly
+                    leafNodes.push(node);
+                }
+            }
+
+            return leafNodes;
+        }
+
+        // Factory function to create range sort comparators for specific columns
+        function createRangeSortComparator(fieldName) {
+            return function (valueA, valueB, nodeA, nodeB, isInverted) {
+                // Extract values for comparison based on sort direction
+                const getValue = (value, node) => {
+                    if (value == null) {
+                        // If value is null and node is a group, try to calculate from children
+                        if (node && node.group && node.childrenAfterFilter) {
+                            const allLeafNodes = getAllLeafNodes(node.childrenAfterFilter);
+                            const values = allLeafNodes
+                                .map(child => child.data ? child.data[fieldName] : null)
+                                .filter(v => v != null && !isNaN(v));
+
+                            if (values.length > 0) {
+                                const min = Math.min(...values);
+                                const max = Math.max(...values);
+                                return isInverted ? max : min;
+                            }
+                        }
+                        return 0;
+                    }
+                    if (typeof value === 'object' && value.min !== undefined) {
+                        // Use max for descending (high to low), min for ascending (low to high)
+                        return isInverted ? value.max : value.min;
+                    }
+                    return value;
+                };
+
+                const valA = getValue(valueA, nodeA);
+                const valB = getValue(valueB, nodeB);
+
+                if (valA < valB) return -1;
+                if (valA > valB) return 1;
+                return 0;
+            };
+        }
+        // Helper function to create percentile buckets
+        function createPercentileBuckets(values, numBuckets = 10) {
+            if (values.length === 0) return [];
+
+            const sortedValues = [...values].sort((a, b) => a - b);
+            const bucketSize = Math.ceil(sortedValues.length / numBuckets);
+            const buckets = [];
+
+            for (let i = 0; i < numBuckets; i++) {
+                const startIdx = i * bucketSize;
+                const endIdx = Math.min(startIdx + bucketSize, sortedValues.length);
+                const bucketValues = sortedValues.slice(startIdx, endIdx);
+
+                if (bucketValues.length > 0) {
+                    buckets.push({
+                        min: bucketValues[0],
+                        max: bucketValues[bucketValues.length - 1],
+                        rank: i + 1
+                    });
+                }
+            }
+
+            return buckets;
+        }
+
+        // Helper function to get bucket rank for a value
+        function getBucketRank(value, buckets) {
+            if (value == null) return null;
+            for (const bucket of buckets) {
+                if (value >= bucket.min && value <= bucket.max) {
+                    return bucket.rank;
+                }
+            }
+            return null;
+        }
+
+        // Index creation functions with bucketing
+        function createYearIndex(cars) {
+            const validCars = cars.filter(car => car.regYear != null);
+            if (validCars.length === 0) return [];
+
+            // Create year buckets (10 buckets)
+            const yearValues = validCars.map(car => car.regYear);
+            const yearBuckets = createPercentileBuckets(yearValues, 10);
+
+            // Create price buckets for secondary sorting
+            const priceValues = validCars.map(car => car.priceNum).filter(p => p != null);
+            const priceBuckets = createPercentileBuckets(priceValues, 5);
+
+            // Create range buckets for tertiary sorting
+            const rangeValues = validCars.map(car => car.electricRangeNum).filter(r => r != null);
+            const rangeBuckets = createPercentileBuckets(rangeValues, 5);
+
+            return validCars
+                .map(car => {
+                    const yearRank = getBucketRank(car.regYear, yearBuckets);
+                    const priceRank = getBucketRank(car.priceNum, priceBuckets);
+                    const rangeRank = getBucketRank(car.electricRangeNum, rangeBuckets);
+
+                    return {
+                        ...car,
+                        yearIndex: yearRank,
+                        yearBucket: yearRank,
+                        priceBucket: priceRank,
+                        rangeBucket: rangeRank
+                    };
+                })
+                .sort((a, b) => {
+                    // Primary: Year bucket (lower rank = better)
+                    if (a.yearBucket !== b.yearBucket) {
+                        return a.yearBucket - b.yearBucket;
+                    }
+                    // Secondary: Price bucket (lower rank = better)
+                    if (a.priceBucket !== b.priceBucket) {
+                        return a.priceBucket - b.priceBucket;
+                    }
+                    // Tertiary: Range bucket (lower rank = better)
+                    if (a.rangeBucket !== b.rangeBucket) {
+                        return a.rangeBucket - b.rangeBucket;
+                    }
+                    // Quaternary: Make/Model for consistency
+                    return a.make.localeCompare(b.make) || a.model.localeCompare(b.model);
+                })
+                .map((car, index) => ({ ...car, yearIndex: car.yearBucket }));
+        }
+
+        function createPriceIndex(cars) {
+            const validCars = cars.filter(car => car.priceNum != null);
+            if (validCars.length === 0) return [];
+
+            // Create price buckets (10 buckets)
+            const priceValues = validCars.map(car => car.priceNum);
+            const priceBuckets = createPercentileBuckets(priceValues, 10);
+
+            // Create year buckets for secondary sorting
+            const yearValues = validCars.map(car => car.regYear).filter(y => y != null);
+            const yearBuckets = createPercentileBuckets(yearValues, 5);
+
+            // Create range buckets for tertiary sorting
+            const rangeValues = validCars.map(car => car.electricRangeNum).filter(r => r != null);
+            const rangeBuckets = createPercentileBuckets(rangeValues, 5);
+
+            return validCars
+                .map(car => {
+                    const priceRank = getBucketRank(car.priceNum, priceBuckets);
+                    const yearRank = getBucketRank(car.regYear, yearBuckets);
+                    const rangeRank = getBucketRank(car.electricRangeNum, rangeBuckets);
+
+                    return {
+                        ...car,
+                        priceIndex: priceRank,
+                        priceBucket: priceRank,
+                        yearBucket: yearRank,
+                        rangeBucket: rangeRank
+                    };
+                })
+                .sort((a, b) => {
+                    // Primary: Price bucket (lower rank = better)
+                    if (a.priceBucket !== b.priceBucket) {
+                        return a.priceBucket - b.priceBucket;
+                    }
+                    // Secondary: Year bucket (lower rank = better)
+                    if (a.yearBucket !== b.yearBucket) {
+                        return a.yearBucket - b.yearBucket;
+                    }
+                    // Tertiary: Range bucket (lower rank = better)
+                    if (a.rangeBucket !== b.rangeBucket) {
+                        return a.rangeBucket - b.rangeBucket;
+                    }
+                    // Quaternary: Make/Model for consistency
+                    return a.make.localeCompare(b.make) || a.model.localeCompare(b.model);
+                })
+                .map((car, index) => ({ ...car, priceIndex: car.priceBucket }));
+        }
+
+        function createElectricRangeIndex(cars) {
+            const validCars = cars.filter(car => car.electricRangeNum != null);
+            if (validCars.length === 0) return [];
+
+            // Create range buckets (10 buckets)
+            const rangeValues = validCars.map(car => car.electricRangeNum);
+            const rangeBuckets = createPercentileBuckets(rangeValues, 10);
+
+            // Create year buckets for secondary sorting
+            const yearValues = validCars.map(car => car.regYear).filter(y => y != null);
+            const yearBuckets = createPercentileBuckets(yearValues, 5);
+
+            // Create price buckets for tertiary sorting
+            const priceValues = validCars.map(car => car.priceNum).filter(p => p != null);
+            const priceBuckets = createPercentileBuckets(priceValues, 5);
+
+            return validCars
+                .map(car => {
+                    const rangeRank = getBucketRank(car.electricRangeNum, rangeBuckets);
+                    const yearRank = getBucketRank(car.regYear, yearBuckets);
+                    const priceRank = getBucketRank(car.priceNum, priceBuckets);
+
+                    return {
+                        ...car,
+                        electricRangeIndex: rangeRank,
+                        rangeBucket: rangeRank,
+                        yearBucket: yearRank,
+                        priceBucket: priceRank
+                    };
+                })
+                .sort((a, b) => {
+                    // Primary: Range bucket (lower rank = better)
+                    if (a.rangeBucket !== b.rangeBucket) {
+                        return a.rangeBucket - b.rangeBucket;
+                    }
+                    // Secondary: Year bucket (lower rank = better)
+                    if (a.yearBucket !== b.yearBucket) {
+                        return a.yearBucket - b.yearBucket;
+                    }
+                    // Tertiary: Price bucket (lower rank = better)
+                    if (a.priceBucket !== b.priceBucket) {
+                        return a.priceBucket - b.priceBucket;
+                    }
+                    // Quaternary: Make/Model for consistency
+                    return a.make.localeCompare(b.make) || a.model.localeCompare(b.model);
+                })
+                .map((car, index) => ({ ...car, electricRangeIndex: car.rangeBucket }));
+        }
+
         // Fetch the JSON and initialize ag-Grid
-        fetch('data/bilbasen_cars_20250704_101726.json')
+        fetch('data/latest_cars.json')
             .then(res => res.json())
             .then(data => {
                 const listings = data.listings || [];
-                const rowData = listings.map(car => {
+                let rowData = listings.map(car => {
                     const priceStr = getPrice(car.price);
                     const priceNum = parsePrice(priceStr);
-                    if (car.make && car.make.toLowerCase() === 'renault') {
-                        console.log('[DEBUG] Renault row:', {
-                            make: car.make,
-                            model: car.model,
-                            priceStr,
-                            priceNum,
-                            car
-                        });
-                    }
                     return {
                         image: getFirstImage(car.media),
                         make: car.make,
@@ -183,9 +677,36 @@
                         mileage: getMileage(car.properties),
                         mileageNum: parseMileage(getMileage(car.properties)),
                         regdate: getRegDate(car.properties),
+                        regYear: getRegYear(car.properties),
+                        horsepower: getHorsepower(car.properties),
+                        horsepowerNum: parseHorsepower(getHorsepower(car.properties)),
+                        electricRange: getElectricRange(car.properties),
+                        electricRangeNum: parseElectricRange(getElectricRange(car.properties)),
+                        fuelType: getFuelType(car.properties),
                         link: car.uri
                     };
                 });
+
+                // Create indexes
+                const yearIndexedData = createYearIndex([...rowData]);
+                const priceIndexedData = createPriceIndex([...rowData]);
+                const electricRangeIndexedData = createElectricRangeIndex([...rowData]);
+
+                // Merge indexes back to original data
+                rowData = rowData.map(car => {
+                    const yearIndexed = yearIndexedData.find(item => item.link === car.link);
+                    const priceIndexed = priceIndexedData.find(item => item.link === car.link);
+                    const electricRangeIndexed = electricRangeIndexedData.find(item => item.link === car.link);
+
+                    return {
+                        ...car,
+                        yearIndex: yearIndexed ? yearIndexed.yearIndex : null,
+                        priceIndex: priceIndexed ? priceIndexed.priceIndex : null,
+                        electricRangeIndex: electricRangeIndexed ? electricRangeIndexed.electricRangeIndex : null
+                    };
+                });
+
+
                 const columnDefs = [
                     {
                         headerName: 'Image',
@@ -193,12 +714,90 @@
                         cellRenderer: params => params.value ? `<img class='car-img' src='${params.value}'/>` : '',
                         width: 100,
                         sortable: false,
-                        filter: false
+                        filter: false,
+                        hide: true,
+                        enableRowGroup: false
                     },
-                    { headerName: 'Make', field: 'make', filter: 'agSetColumnFilter', enableRowGroup: true, rowGroup: true },
-                    { headerName: 'Model', field: 'model', filter: true, enableRowGroup: true, rowGroup: true, hide: true },
-                    { headerName: 'Variant', field: 'variant', filter: true, rowGroup: true, hide: true },
-                    { headerName: 'Reg. Date', field: 'regdate', filter: true, enableRowGroup: true },
+                    {
+                        headerName: 'Y',
+                        field: 'yearIndex',
+                        width: 120,
+                        sortable: true,
+                        filter: 'agNumberColumnFilter',
+                        enableRowGroup: false,
+                        cellRenderer: params => {
+                            if (!params.value) return '';
+                            let badgeClass = 'rank-other';
+                            if (params.value <= 3) badgeClass = 'rank-top3';
+                            else if (params.value <= 5) badgeClass = 'rank-top5';
+                            else if (params.value <= 7) badgeClass = 'rank-top7';
+                            return `<span class="rank-badge ${badgeClass}">${params.value}</span>`;
+                        },
+                        cellStyle: params => {
+                            if (params.value <= 3) return { backgroundColor: '#e8f5e8', fontWeight: 'bold' };
+                            if (params.value <= 5) return { backgroundColor: '#f0f8f0' };
+                            if (params.value <= 7) return { backgroundColor: '#fff3cd' };
+                            return null;
+                        }
+                    },
+                    {
+                        headerName: 'P',
+                        field: 'priceIndex',
+                        width: 120,
+                        sortable: true,
+                        filter: 'agNumberColumnFilter',
+                        enableRowGroup: false,
+                        cellRenderer: params => {
+                            if (!params.value) return '';
+                            let badgeClass = 'rank-other';
+                            if (params.value <= 3) badgeClass = 'rank-top3';
+                            else if (params.value <= 5) badgeClass = 'rank-top5';
+                            else if (params.value <= 7) badgeClass = 'rank-top7';
+                            return `<span class="rank-badge ${badgeClass}">${params.value}</span>`;
+                        },
+                        cellStyle: params => {
+                            if (params.value <= 3) return { backgroundColor: '#e8f5e8', fontWeight: 'bold' };
+                            if (params.value <= 5) return { backgroundColor: '#f0f8f0' };
+                            if (params.value <= 7) return { backgroundColor: '#fff3cd' };
+                            return null;
+                        }
+                    },
+                    {
+                        headerName: 'R',
+                        field: 'electricRangeIndex',
+                        width: 120,
+                        sortable: true,
+                        filter: 'agNumberColumnFilter',
+                        enableRowGroup: false,
+                        cellRenderer: params => {
+                            if (!params.value) return '';
+                            let badgeClass = 'rank-other';
+                            if (params.value <= 3) badgeClass = 'rank-top3';
+                            else if (params.value <= 5) badgeClass = 'rank-top5';
+                            else if (params.value <= 7) badgeClass = 'rank-top7';
+                            return `<span class="rank-badge ${badgeClass}">${params.value}</span>`;
+                        },
+                        cellStyle: params => {
+                            if (params.value <= 3) return { backgroundColor: '#e8f5e8', fontWeight: 'bold' };
+                            if (params.value <= 5) return { backgroundColor: '#f0f8f0' };
+                            if (params.value <= 7) return { backgroundColor: '#fff3cd' };
+                            return null;
+                        }
+                    },
+                    { headerName: 'Make', field: 'make', filter: 'agSetColumnFilter', enableRowGroup: true },
+                    { headerName: 'Model', field: 'model', filter: true, enableRowGroup: true },
+                    { headerName: 'Variant', field: 'variant', filter: true, enableRowGroup: true },
+                    {
+                        headerName: 'Reg. Date',
+                        field: 'regYear',
+                        valueGetter: params => params.data ? params.data.regYear : null,
+                        aggFunc: yearRangeAggFunc,
+                        valueFormatter: yearRangeFormatter,
+                        filter: 'agNumberColumnFilter',
+                        enableRowGroup: true,
+                        sortable: true,
+                        comparator: createRangeSortComparator('regYear')
+                    },
                     {
                         headerName: 'Price',
                         field: 'priceNum',
@@ -206,35 +805,70 @@
                         aggFunc: priceRangeAggFunc,
                         valueFormatter: priceRangeFormatter,
                         filter: 'agNumberColumnFilter',
-                        enableRowGroup: true
-                    },
-                    {
-                        headerName: 'Min Price',
-                        field: 'minPrice',
-                        valueGetter: params => params.data ? params.data.priceNum : null,
-                        aggFunc: minPriceAggFunc,
-                        valueFormatter: minMaxPriceFormatter,
-                        filter: 'agNumberColumnFilter',
+                        enableRowGroup: true,
                         sortable: true,
-                        enableRowGroup: false
+                        sort: 'asc',
+                        comparator: createRangeSortComparator('priceNum')
                     },
-                    {
-                        headerName: 'Max Price',
-                        field: 'maxPrice',
-                        valueGetter: params => params.data ? params.data.priceNum : null,
-                        aggFunc: maxPriceAggFunc,
-                        valueFormatter: minMaxPriceFormatter,
-                        filter: 'agNumberColumnFilter',
-                        sortable: true,
-                        enableRowGroup: false
-                    },
+                    // {
+                    //     headerName: 'Min Price',
+                    //     field: 'minPrice',
+                    //     valueGetter: params => params.data ? params.data.priceNum : null,
+                    //     aggFunc: minPriceAggFunc,
+                    //     valueFormatter: minMaxPriceFormatter,
+                    //     filter: 'agNumberColumnFilter',
+                    //     sortable: true,
+                    //     enableRowGroup: false
+                    // },
+                    // {
+                    //     headerName: 'Max Price',
+                    //     field: 'maxPrice',
+                    //     valueGetter: params => params.data ? params.data.priceNum : null,
+                    //     aggFunc: maxPriceAggFunc,
+                    //     valueFormatter: minMaxPriceFormatter,
+                    //     filter: 'agNumberColumnFilter',
+                    //     sortable: true,
+                    //     enableRowGroup: false
+                    // },
                     {
                         headerName: 'Mileage',
                         field: 'mileageNum',
                         valueGetter: params => params.data ? params.data.mileageNum : null,
-                        valueFormatter: params => params.value ? params.value.toLocaleString('da-DK') + ' km' : '',
+                        aggFunc: mileageRangeAggFunc,
+                        valueFormatter: mileageRangeFormatter,
                         filter: 'agNumberColumnFilter',
                         enableValue: true,
+                        enableRowGroup: true,
+                        sortable: true,
+                        comparator: createRangeSortComparator('mileageNum')
+                    },
+                    {
+                        headerName: 'Horsepower',
+                        field: 'horsepowerNum',
+                        valueGetter: params => params.data ? params.data.horsepowerNum : null,
+                        aggFunc: horsepowerRangeAggFunc,
+                        valueFormatter: horsepowerRangeFormatter,
+                        filter: 'agNumberColumnFilter',
+                        enableRowGroup: true,
+                        sortable: true,
+                        comparator: createRangeSortComparator('horsepowerNum')
+                    },
+                    {
+                        headerName: 'Electric Range',
+                        field: 'electricRangeNum',
+                        valueGetter: params => params.data ? params.data.electricRangeNum : null,
+                        aggFunc: electricRangeAggFunc,
+                        valueFormatter: electricRangeFormatter,
+                        filter: 'agNumberColumnFilter',
+                        enableRowGroup: true,
+                        sortable: true,
+                        comparator: createRangeSortComparator('electricRangeNum')
+                    },
+                    {
+                        headerName: 'Fuel Type',
+                        field: 'fuelType',
+                        aggFunc: fuelTypeAggFunc,
+                        filter: 'agSetColumnFilter',
                         enableRowGroup: true
                     },
                     // { headerName: 'City', field: 'city', filter: true },
@@ -246,11 +880,9 @@
                     }
                 ];
                 const gridOptions = {
-                    suppressRowGroupColumns: true,
                     columnDefs,
                     rowData,
                     defaultColDef: {
-                        flex: 1,
                         minWidth: 100,
                         resizable: true,
                         sortable: true,
@@ -258,24 +890,162 @@
                         enableRowGroup: true,
                         enableValue: true
                     },
-                    groupDisplayType: 'multipleColumns',
+                    autoSizeStrategy: {
+                        type: 'fitCellContents'
+                    },
+                    // Enable multi-column sorting
+                    multiSortKey: 'ctrl',
+                    // Enable row selection to avoid error #132
+                    cellSelection: true,
+                    rowSelection: {
+                        mode: 'multiRow'
+                    },
+                    groupDisplayType: 'singleColumn',
                     rowGroupPanelShow: 'always',
                     animateRows: true,
                     pagination: true,
-                    paginationPageSize: 30,
-                    // autoGroupColumnDef: {
-                    //     headerName: 'Group',
-                    //     minWidth: 200,
-                    //     cellRendererParams: {
-                    //         footerValueGetter: params => {
-                    //             const isRoot = params.node.level === -1;
-                    //             return isRoot ? 'Grand Total' : `${params.value} Total`;
-                    //         }
-                    //     }
-                    // },
-                    suppressAggFuncInHeader: true
+                    paginationPageSize: 50,
+                    autoGroupColumnDef: {
+                        headerName: 'Car Details',
+                        minWidth: 300,
+                        cellRendererParams: {
+                            footerValueGetter: params => {
+                                const isRoot = params.node.level === -1;
+                                return isRoot ? 'Grand Total' : `${params.value} Total`;
+                            }
+                        }
+                    },
+                    suppressAggFuncInHeader: true,
+                    onGridReady: function (params) {
+                        const gridApi = params.api;
+
+                        function saveFilteredRows() {
+                            const filteredRows = [];
+                            gridApi.forEachNodeAfterFilterAndSort(function (node) {
+                                if (node.data) filteredRows.push(node.data);
+                            });
+                            localStorage.setItem('filteredCars', JSON.stringify(filteredRows));
+                        }
+
+                        function saveFilterState() {
+                            const filterModel = gridApi.getFilterModel();
+                            localStorage.setItem('filterState', JSON.stringify(filterModel));
+                        }
+
+                        function restoreFilterState() {
+                            const savedFilterState = localStorage.getItem('filterState');
+                            if (savedFilterState) {
+                                try {
+                                    const filterModel = JSON.parse(savedFilterState);
+                                    gridApi.setFilterModel(filterModel);
+                                } catch (e) {
+                                    console.error('Error restoring filter state:', e);
+                                }
+                            }
+                        }
+
+                        function saveRowGroupState() {
+                            const rowGroupCols = gridApi.getColumnDefs()
+                                .filter(col => col.rowGroup)
+                                .map(col => col.field);
+                            localStorage.setItem('rowGroupState', JSON.stringify(rowGroupCols));
+                        }
+
+                        function restoreRowGroupState() {
+                            const savedRowGroupState = localStorage.getItem('rowGroupState');
+                            if (savedRowGroupState) {
+                                try {
+                                    const rowGroupCols = JSON.parse(savedRowGroupState);
+                                    // Set row group columns
+                                    gridApi.setRowGroupColumns(rowGroupCols);
+                                } catch (e) {
+                                    console.error('Error restoring row group state:', e);
+                                }
+                            }
+                        }
+
+                        // Sort functionality
+
+
+                        function saveSortState() {
+                            try {
+                                if (gridApi.getState) {
+                                    const gridState = gridApi.getState();
+                                    localStorage.setItem('bilbasenGridState', JSON.stringify(gridState));
+                                }
+                            } catch (e) {
+                                console.error('Error saving grid state:', e);
+                            }
+                        }
+
+                        function loadSortState() {
+                            const savedGridState = localStorage.getItem('bilbasenGridState');
+                            if (savedGridState) {
+                                try {
+                                    const gridState = JSON.parse(savedGridState);
+                                    if (gridApi.setState) {
+                                        gridApi.setState(gridState);
+                                        return true;
+                                    }
+                                } catch (e) {
+                                    console.error('Error loading grid state:', e);
+                                    localStorage.removeItem('bilbasenGridState');
+                                }
+                            }
+                            return false;
+                        }
+
+
+
+                        // Auto-save sort state when sort changes
+                        if (gridApi.addEventListener) {
+                            gridApi.addEventListener('sortChanged', () => {
+                                saveSortState(); // Auto-save on any sort change
+                            });
+                        }
+
+                        // Load saved sort state on startup
+                        const sortLoaded = loadSortState();
+
+                        // If no saved state, set default sort
+                        if (!sortLoaded) {
+                            // Set default sort by price using grid state
+                            if (gridApi.setState) {
+                                const defaultState = {
+                                    sort: {
+                                        sortModel: [
+                                            { colId: 'priceNum', sort: 'asc' }
+                                        ]
+                                    }
+                                };
+                                gridApi.setState(defaultState);
+                            }
+                        }
+
+                        // Restore states on load
+                        restoreFilterState();
+                        restoreRowGroupState();
+
+                        // Save both filtered data and filter state on filter change
+                        gridApi.addEventListener('filterChanged', function () {
+                            saveFilteredRows();
+                            saveFilterState();
+                        });
+
+                        // Save row group state on column row group change
+                        gridApi.addEventListener('columnRowGroupChanged', function () {
+                            saveRowGroupState();
+                        });
+
+                        // Save once on initial load
+                        saveFilteredRows();
+                        saveFilterState();
+                        saveRowGroupState();
+                    }
                 };
                 agGrid.createGrid(document.getElementById('myGrid'), gridOptions);
+
+
             });
     </script>
 </body>
